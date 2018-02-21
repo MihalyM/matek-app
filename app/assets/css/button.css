@@ -1,0 +1,33 @@
+.button {
+  font-size: 18;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 10 0 10 0;
+}
+
+.button-primary {
+  background-color: #f8d863;
+  border-color: #c2b785;
+  border-radius: 3;
+  border-width: 3;
+  color: #524e3c;
+  padding: 10 0 10 0;
+  width: 80%;
+}
+
+.button-rounded {
+  width: 110;
+  height: 110;
+  border-radius: 55;
+  border-width: 3;
+  background-color: #f8d863;
+  border-color: #524e3c;
+  color: #524e3c;
+}
+
+.button-small {
+  width: 80;
+  height: 80;
+  border-radius: 40;
+  vertical-align: middle;
+}

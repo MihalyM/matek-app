@@ -1,0 +1,27 @@
+.avatar {
+  border-color: #524e3c;
+  border-radius: 40;
+  border-width: 2;
+  height: 80;
+  width: 80;
+}
+
+.avatar--small {
+  border-radius: 20;
+  border-width: 1;
+  height: 40;
+  width: 40;
+}
+
+.avatar--medium {
+  border-radius: 30;
+  height: 60;
+  width: 60;
+}
+
+.avatar--big {
+  border-width: 3;
+  height: 140;
+  width: 140;
+  border-radius: 70;
+}

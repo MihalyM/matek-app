@@ -1,0 +1,13 @@
+<ScrollView class="page-wrapper">
+  <FlexboxLayout flexDirection="column" justifyContent="space-around">
+    <StackLayout class="picture-wrapper">
+      <Image class="logo-big" src="~/assets/images/logo.png"></Image>
+    </StackLayout>
+    <StackLayout class="page">
+      <FlexboxLayout flexWrap="wrap" justifyContent="space-around">
+        <Button class="button button-primary" text="Témakörök" [nsRouterLink]="['/temakorok']"></Button>
+        <Button class="button button-primary" text="Az applikációról" [nsRouterLink]="['/about']"></Button>
+      </FlexboxLayout>
+    </StackLayout>
+  </FlexboxLayout>
+</ScrollView>

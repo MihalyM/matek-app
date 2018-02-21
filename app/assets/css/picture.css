@@ -1,0 +1,11 @@
+.picture-wrapper {
+  padding: 20 0 0 0; 
+}
+
+.logo-big {
+  border-color: #524e3c;
+  border-radius: 100;
+  border-width: 3;
+  height: 200;
+  width: 200;
+}

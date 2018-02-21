@@ -1,0 +1,13 @@
+.actionbar {
+  background-color: #524e3c;
+  color: #f8d863;
+}
+
+.actionbar-title {
+  text-align: center;
+  padding-right: 5;
+  color: #f8d863;
+  font-weight: bold;
+  font-size: 20;
+  font-family: sans-serif;
+}
