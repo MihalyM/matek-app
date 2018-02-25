@@ -55,7 +55,8 @@
 }
 
 .keplet {
-  font-size: 18;
+  font-family: serif;
+  font-size: 16;
   font-style: italic;
   font-weight: bold;
 }
