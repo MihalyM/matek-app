@@ -8,12 +8,11 @@
   </StackLayout>
 </ActionBar>
 
-<ScrollView>
-  <StackLayout class="page-wrapper">
-    <StackLayout class="pt-10">
-      <Label class="h2" [text]="tema.title" textWrap="true"></Label>
-      <StackLayout>
-        <Label class="h3" text="Alapfogalmak:"></Label>
+<TabView selectedIndex="0">
+  <StackLayout *tabItem="{title: 'Alapfogalmak'}">
+    <Label text="Alapfogalmak" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
         <Label class="definition text-block" textWrap="true">
           <FormattedString>
             <Span text="Változó: " class="bold"></Span>
@@ -84,6 +83,19 @@
         <Label text="Alapvető, hogy a matematikai kifejezéseket mindenki ugyanúgy értelmezze, a szorzás jelét ezért két szám közé mindig ki kell írni, mert a hiánya zavart okozna."
           textWrap="true"></Label>
       </StackLayout>
-    </StackLayout>
+    </ScrollView>
   </StackLayout>
-</ScrollView>
+  <StackLayout *tabItem="{title: 'Feladatok'}">
+    <Label text="Feladatok" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label text="Kirándulás:" class="h3"></Label>
+        <Label class="text" textWrap="true" text="Egy vállalat rendezvényszervező céget kért fel egy kirándulás megszervezésére, ám azt még nem tudták velük közölni, hogy pontosan hányan fognak a kiránduláson részt venni."></Label>
+        <Label class="text" textWrap="true" text="A kirándulás teljes költsége az utazásból, a szállásból és az étkezésből áll."></Label>
+        <Label class="text" textWrap="true" text="Egy busz fogja az összes kirándulót szállítani, amelynek bérleti díja 50 000 Ft. Egy személy szállásának a költsége 4000Ft, az étkezés ára azonban még nem ismert."></Label>
+        <Label class="text" textWrap="true" text="Alkoss képletet a kirándulás teljes költségére!"></Label>
+        <Image width="200" src="~/assets/images/temakorok/algebrai-kifejezesek/kirandulas-1.png" class="center"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</TabView>
