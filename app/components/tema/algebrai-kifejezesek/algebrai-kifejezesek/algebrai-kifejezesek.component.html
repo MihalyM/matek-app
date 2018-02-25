@@ -11,9 +11,78 @@
 <ScrollView>
   <StackLayout class="page-wrapper">
     <StackLayout class="pt-10">
-      <Label class="text-header" [text]="tema.title" textWrap="true"></Label>
+      <Label class="h2" [text]="tema.title" textWrap="true"></Label>
       <StackLayout>
-
+        <Label class="h3" text="Alapfogalmak:"></Label>
+        <Label class="definition text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Változó: " class="bold"></Span>
+            <Span text="Gyakran előfordul, hogy a nem ismert mennyiségeket betűvel jelöljük, amit "></Span>
+            <Span text="változónak" class="bold"></Span>
+            <Span text=" nevezünk."></Span>
+          </FormattedString>
+        </Label>
+        <Image width="160" src="~/assets/images/temakorok/algebrai-kifejezesek/abra-1.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az ábrán a téglalap két szomszédos oldalának hosszát" class="bold"></Span>
+            <Span text=" 𝒂 " class="bold"></Span>
+            <Span text="és" class="bold"></Span>
+            <Span text=" 𝒃 " class="bold"></Span>
+            <Span text="változó jelöli, a területét pedig" class="bold"></Span>
+            <Span text=" 𝑻" class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Image width="120" src="~/assets/images/temakorok/algebrai-kifejezesek/abra-2.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az ábrán látható" class="bold"></Span>
+            <Span text=" 4⋅𝒙 " class="keplet"></Span>
+            <Span text="szintén egy algebrai kifejezés: az" class="bold"></Span>
+            <Span text=" 𝒙 " class="keplet"></Span>
+            <Span text="változó és a 4 szorzatát jelöli" class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az algebrai kifejezésekben, ha ez az értelmezést nem gátolja, gyakran"></Span>
+            <Span text=" elmarad a szorzás jele" class="bold"></Span>
+            <Span text=", hiszen két változó, szám és változó vagy zárójel és változó között nem okoz gondot a szorzás jelének hiánya."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Például:" class="bold"></Span>
+            <Span text=" 𝒂⋅𝒃⋅𝒄 " class="keplet"></Span>
+            <Span text="felírható"></Span>
+            <Span text=" 𝒂𝒃𝒄 " class="keplet"></Span>
+            <Span text="alakban,"></Span>
+            <Span text=" 7⋅𝒏 " class="keplet"></Span>
+            <Span text="felírható"></Span>
+            <Span text=" 7𝒏 " class="keplet"></Span>
+            <Span text="alakban, "></Span>
+            <Span text="vagy"></Span>
+            <Span text=" 𝒙⋅(𝒚+𝒛) " class="keplet"></Span>
+            <Span text="felírható"></Span>
+            <Span text=" 𝒙(𝒚+𝒛) " class="keplet"></Span>
+            <Span text="alakban, mert tudható, hogy a változót a mellé írt változóval, számmal vagy zárójellel a szorzás művelete kapcsolja össze."></Span>
+          </FormattedString>
+        </Label>
+        <Label text="𝒂⋅𝒃⋅𝒄 ⟶ 𝒂𝒃𝒄" class="keplet color-highlight-1 center" textWrap="true"></Label>
+        <Label text="7⋅𝒏 ⟶ 7𝒏" class="keplet color-highlight-2 center" textWrap="true"></Label>
+        <Label text="𝒙⋅(𝒚+𝒛) ⟶ 𝒙(𝒚+𝒛)" class="keplet color-highlight-3 center" textWrap="true"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Továbbra sem hagyható el azonban a szorzás jele két szám között!"></Span>
+            <Span text="Ezt megengedve ugyanis nem lehetne tudni, hogy például a"></Span>
+            <Span text=" 42 " class="keplet"></Span>
+            <Span text="egy kétjegyű számot jelöl, vagy éppen"></Span>
+            <Span text=" 4⋅2 " class="keplet"></Span>
+            <Span text="-t"></Span>
+          </FormattedString>
+        </Label>
+        <Label text="Alapvető, hogy a matematikai kifejezéseket mindenki ugyanúgy értelmezze, a szorzás jelét ezért két szám közé mindig ki kell
+        írni, mert a hiánya zavart okozna." textWrap="true"></Label>
       </StackLayout>
     </StackLayout>
   </StackLayout>

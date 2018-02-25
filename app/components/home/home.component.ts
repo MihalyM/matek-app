@@ -20,6 +20,7 @@ let Http = require("http");
   templateUrl: "home.component.html"
 })
 export class HomeComponent implements OnInit {
+
   constructor(
     private page: Page,
     private router: Router

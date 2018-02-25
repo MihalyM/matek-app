@@ -1,9 +1,42 @@
-.header {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   color: #524e3c;
   font-family: sans-serif;
   font-size: 18;
   font-weight: bold;
   margin: 0 0 10 0;
+}
+
+.h1 {
+  font-size: 26;
+}
+
+.h2 {
+  font-size: 22;
+}
+
+.h3 {
+  font-size: 18;
+}
+
+.h4 {
+  font-size: 18;
+  font-weight: normal;
+}
+
+.h5 {
+  font-size: 16;
+  font-weight: normal;
+}
+
+.h6 {
+  font-size: 16;
+  font-weight: normal;
+  font-style: italic;
 }
 
 .text {
@@ -13,56 +46,39 @@
   margin: 0 0 10 0;
 }
 
-.large-header {
-  font-family: sans-serif;
-  font-size: 32;
-  color: #524e3c;
-  font-weight: bold;
-  margin: 0 0 2 0;
+.italic {
+  font-style: italic;
 }
 
-.text-header {
+.bold {
+  font-weight: bold;
+}
+
+.keplet {
   font-size: 18;
-  font-family: sans-serif;
-  color: #524e3c;
-  font-weight: bold;
-  margin: 0 0 2 0;
-}
-
-.text-question {
-  font-size: 18;
-  font-family: sans-serif;
-  color: #524e3c;
+  font-style: italic;
   font-weight: bold;
 }
 
-.text-input {
-  font-size: 16;
-  font-family: sans-serif;
-  color: #524e3c;
-  border-width: 1;
-  border-color: #f8d863;
-  border-radius: 5;
-  margin: 10 0 10 0;
-  padding: 0 0 0 10;
-  height: 34;
+.text-block {
+  margin: 10 0;
 }
 
-.text-area {
-  font-size: 16;
-  font-family: sans-serif;
-  color: #524e3c;
-  border-width: 1;
-  border-color: #f8d863;
-  border-radius: 5;
-  margin: 10 0 10 0;
-  padding: 10 0 0 5;
-  height: 150;
+.definition {
+  background: #f8d863;
+  border-left-width: 6;
+  border-color: #524e3c;
+  padding: 10;
 }
 
-.hr {
-  height: 1;
-  border-bottom-width: 1;
-  border-bottom-color: #f8d863;
-  margin: 5 0 15 0;
+.color-highlight-1 {
+  color: #297941;
+}
+
+.color-highlight-2 {
+  color: #2968a3;
+}
+
+.color-highlight-3 {
+  color: #831a63;
 }
