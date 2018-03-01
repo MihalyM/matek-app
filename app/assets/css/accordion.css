@@ -1,0 +1,28 @@
+.feladatok {
+  display: flex;
+  margin: 20 0 0;
+}
+
+.feladat-valaszto {
+  color: #297941;
+  font-size: 20;
+  font-weight: bold;
+  margin: 10;
+}
+
+.feladat {
+  margin: 0 0 10;
+}
+
+.megoldas {
+  background: #c6dfcd;
+  border-width: 4;
+  border-color: #297941;
+  margin: 10 0 0;
+  padding: 10;
+}
+
+.kerdes {
+  color: #297941;
+  font-weight: bold;
+}

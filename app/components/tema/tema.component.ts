@@ -3,6 +3,8 @@ import { setString, getString } from "application-settings";
 export class TemaComponent {
   temakor: any = [];
   tema: any = {};
+  activFeladat = 0;
+  megoldasok = {};
   r;
   l;
   p;
@@ -31,7 +33,6 @@ export class TemaComponent {
       for (const tema of this.temakor.temak) {
         if (tema.url === currentUrl) {
           this.tema = tema;
-          console.log(JSON.stringify(tema));
           break;
         }
       }
@@ -39,6 +40,19 @@ export class TemaComponent {
       // Elofordulhat, hogy nincs meg a keresett tema
       this.tema.title = 'Not found';
     }
+  }
+
+  feladatValaszto(feladat) {
+    if (this.activFeladat !== feladat) {
+      this.megoldasok = {};
+      this.activFeladat = feladat;
+    } else {
+      this.activFeladat = 0;
+    }
+  }
+
+  megoldasValaszto(megoldas) {
+    this.megoldasok[megoldas] = !this.megoldasok[megoldas];
   }
 
   goBack() {
