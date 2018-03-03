@@ -3,6 +3,7 @@
 **/*.js.map
 .nsbuildinfo
 .cloud
+.cloud/*
 docs
 report
 hooks
@@ -12,3 +13,4 @@ platforms/ios
 app/tns_modules
 !webpack.config.js
 settings.txt
+.cloud/Build.zip
