@@ -8,13 +8,261 @@
   </StackLayout>
 </ActionBar>
 
-<ScrollView>
-  <StackLayout class="page-wrapper">
-    <StackLayout class="pt-10">
-      <Label class="text-header" [text]="tema.title" textWrap="true"></Label>
-      <StackLayout>
-
+<TabView selectedIndex="0">
+  <StackLayout *tabItem="{title: 'Alapfogalmak'}">
+    <Label text="Alapfogalmak" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label class="definition text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Változó:" class="bold"></Span>
+            <Span text="Gyakran előfordul, hogy a nem ismert mennyiségeket betűvel jelöljük, amit"></Span>
+            <Span text="változónak" class="bold"></Span>
+            <Span text=" nevezünk."></Span>
+          </FormattedString>
+        </Label>
+        <Image width="160" src="~/assets/images/temakorok/algebrai-kifejezesek/abra-1.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az ábrán a téglalap két szomszédos oldalának hosszát" class="bold"></Span>
+            <Span text=" a" class="keplet"></Span>
+            <Span text="és" class="bold"></Span>
+            <Span text=" b" class="keplet"></Span>
+            <Span text="változó jelöli, a területét pedig" class="bold"></Span>
+            <Span text=" T" class="keplet"></Span>
+          </FormattedString>
+        </Label>
+        <Image width="120" src="~/assets/images/temakorok/algebrai-kifejezesek/abra-2.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az ábrán látható" class="bold"></Span>
+            <Span text=" 4⋅x" class="keplet"></Span>
+            <Span text="szintén egy algebrai kifejezés: az" class="bold"></Span>
+            <Span text=" x" class="keplet"></Span>
+            <Span text="változó és a 4 szorzatát jelöli" class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az algebrai kifejezésekben, ha ez az értelmezést nem gátolja, gyakran"></Span>
+            <Span text=" elmarad a szorzás jele" class="bold"></Span>
+            <Span text=", hiszen két változó, szám és változó vagy zárójel és változó között nem okoz gondot a szorzás jelének hiánya."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Például:" class="bold"></Span>
+            <Span text=" a⋅b⋅c" class="keplet"></Span>
+            <Span text="felírható"></Span>
+            <Span text=" abc" class="keplet"></Span>
+            <Span text="alakban,"></Span>
+            <Span text=" 7⋅n" class="keplet"></Span>
+            <Span text="felírható"></Span>
+            <Span text=" 7n" class="keplet"></Span>
+            <Span text="alakban,"></Span>
+            <Span text="vagy"></Span>
+            <Span text=" x⋅(y+z)" class="keplet"></Span>
+            <Span text="felírható"></Span>
+            <Span text=" x(y+z)" class="keplet"></Span>
+            <Span text="alakban, mert tudható, hogy a változót a mellé írt változóval, számmal vagy zárójellel a szorzás művelete kapcsolja össze."></Span>
+          </FormattedString>
+        </Label>
+        <Label text="a⋅b⋅c ⟶ abc" class="keplet color-highlight-1 center" textWrap="true"></Label>
+        <Label text="7⋅n ⟶ 7n" class="keplet color-highlight-2 center" textWrap="true"></Label>
+        <Label text="x⋅(y+z) ⟶ x(y+z)" class="keplet color-highlight-3 center" textWrap="true"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Továbbra sem hagyható el azonban a szorzás jele két szám között!"></Span>
+            <Span text="Ezt megengedve ugyanis nem lehetne tudni, hogy például a"></Span>
+            <Span text=" 42" class="keplet"></Span>
+            <Span text="egy kétjegyű számot jelöl, vagy éppen"></Span>
+            <Span text=" 4⋅2" class="keplet"></Span>
+            <Span text="-t"></Span>
+          </FormattedString>
+        </Label>
+        <Label text="Alapvető, hogy a matematikai kifejezéseket mindenki ugyanúgy értelmezze, a szorzás jelét ezért két szám közé mindig ki kell írni, mert a hiánya zavart okozna."
+          textWrap="true"></Label>
       </StackLayout>
-    </StackLayout>
+    </ScrollView>
   </StackLayout>
-</ScrollView>
+  <StackLayout *tabItem="{title: 'Feladatok'}">
+    <Label text="Feladatok" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+
+        <StackLayout class="feladatok">
+          <Label class="feladat-valaszto" text="1. Kirándulás" (tap)="feladatValaszto(1)"></Label>
+
+          <StackLayout class="feladat" *ngIf="activFeladat === 1">
+            <Label class="text" textWrap="true" text="Egy vállalat rendezvényszervező céget kért fel egy kirándulás megszervezésére, ám azt még nem tudták velük közölni, hogy pontosan hányan fognak a kiránduláson részt venni."></Label>
+            <Label class="text" textWrap="true" text="A kirándulás teljes költsége az utazásból, a szállásból és az étkezésből áll."></Label>
+            <Label class="text" textWrap="true" text="Egy busz fogja az összes kirándulót szállítani, amelynek bérleti díja 50 000 Ft. Egy személy szállásának a költsége 4000Ft, az étkezés ára azonban még nem ismert."></Label>
+            <Label class="text" textWrap="true" text="Alkoss képletet a kirándulás teljes költségére!"></Label>
+            <Image width="200" src="~/assets/images/temakorok/algebrai-kifejezesek/kirandulas-1.png"></Image>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true" text="Add meg, hogy hány olyan ismeretlen érték van a szövegben, amely szükséges az utazás teljes költségének kiszámításához!"></label>
+              <Button class="button button-primary" text="Megoldas" (tap)="megoldasValaszto(1)"></Button>
+              <StackLayout *ngIf="megoldasok[1]">
+                <Label class="text" textWrap="true" text="Az ismeretlen értékek száma: 2."></Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true" text="A teljes költség meghatározásához még szükség van a kirándulók számára és arra, hogy mennyibe kerül egy fő étkezése."></Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <Label class="kerdes" textWrap="true">
+                <FormattedString>
+                  <Span text="Jelölje"></Span>
+                  <Span text=" x " class="keplet"></Span>
+                  <Span text="a kirándulók számát. Add meg, hogy mi lehet az"></Span>
+                  <Span text=" x " class="keplet"></Span>
+                  <Span text="változó alaphalmaza!"></Span>
+                </FormattedString>
+              </Label>
+              <Button class="button button-primary" text="Megoldas" (tap)="megoldasValaszto(2)"></Button>
+              <StackLayout *ngIf="megoldasok[2]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="Az"></Span>
+                    <Span text=" x " class="keplet"></Span>
+                    <Span text=" változó alaphalmaza a pozitív egész számok."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kirándulók száma nem lehet negatív vagy 0, továbbá nem vehet részt a kiránduláson nem egész számú ember, azaz"></Span>
+                    <Span text=" x " class="keplet"></Span>
+                    <Span text="csak pozitív egész szám lehet."></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true" text="Írd fel algebrai kifejezéssel, hogy mennyibe fog kerülni összesen a kiránduláson részt vevők szállása!"></label>
+              <Button class="button button-primary" text="Megoldas" (tap)="megoldasValaszto(3)"></Button>
+              <StackLayout *ngIf="megoldasok[3]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kiránduláson részt vevők szállása összesen:"></Span>
+                    <Span text=" 4000x" class="keplet"></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A szállás teljes költségét megkapod, ha egy fő szállásának díját megszorzod a résztvevők számával."></Span>
+                    <Span text="Ez"></Span>
+                    <Span text=" 4000⋅x " class="keplet"></Span>
+                    <Span text="röviden"></Span>
+                    <Span text=" 4000x" class="keplet"></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true">
+                <FormattedString>
+                  <Span text="Jelölje"></Span>
+                  <Span text=" y " class="keplet"></Span>
+                  <Span text="egy fő étkezésének a díját. Add meg, mi lehet az"></Span>
+                  <Span text=" y " class="keplet"></Span>
+                  <Span text="változó alaphalmaza!"></Span>
+                </FormattedString>
+              </label>
+              <Button class="button button-primary" text="Megoldas" (tap)="megoldasValaszto(4)"></Button>
+              <StackLayout *ngIf="megoldasok[4]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="Az"></Span>
+                    <Span text=" y " class="keplet"></Span>
+                    <Span text="változó alaphalmaza a pozitív egész számok."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span textWrap="true" text="Az étkezés ára nem lehet negatív vagy 0 , továbbá az étel ára nem lehet nem egész számú forint, azaz y csak pozitív egész szám lehet."></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true">
+                <FormattedString>
+                  <Span text="Jelölje"></Span>
+                  <Span text=" y " class="keplet"></Span>
+                  <Span text="egy fő étkezésének a díját. Írd fel algebrai kifejezéssel, mennyibe fog kerülni összesen a kiránduláson részt vevők étkezése!"></Span>
+                </FormattedString>
+              </label>
+              <Button class="button button-primary" text="Megoldas" (tap)="megoldasValaszto(5)"></Button>
+              <StackLayout *ngIf="megoldasok[5]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kiránduláson részt vevők étkezése összesen"></Span>
+                    <Span text=" xy " class="keplet"></Span>
+                    <Span text="forintba fog kerülni."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="Az étkezés teljes költségét megkapod, ha a résztvevők számát megszorzod egy fő étkezésének az árával."></Span>
+                    <Span text="Ez"></Span>
+                    <Span text=" x⋅y " class="keplet"></Span>
+                    <Span text=", röviden"></Span>
+                    <Span text=" xy " class="keplet"></Span>
+                    <Span text="."></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true">
+                <FormattedString>
+                  <Span text="Írd fel algebrai kifejezéssel, hogy mennyi a kirándulás teljes költsége!"></Span>
+                </FormattedString>
+              </label>
+              <Button class="button button-primary" text="Megoldas" (tap)="megoldasValaszto(6)"></Button>
+              <StackLayout *ngIf="megoldasok[6]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kirándulás teljes költségét az"></Span>
+                    <Span text=" 50000+4000x+xy " class="keplet"></Span>
+                    <Span text="algebrai kifejezés írja le."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kirándulás teljes költségét megkapod, ha az utazás, a szállás és az étkezés költségeit összeadod."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="Mivel az utazás teljes költsége"></Span>
+                    <Span text=" 50000 " class="keplet"></Span>
+                    <Span text="forint, a szállásé"></Span>
+                    <Span text=" 4000x " class="keplet"></Span>
+                    <Span text="forint, az étkezésé pedig"></Span>
+                    <Span text=" xy " class="keplet"></Span>
+                    <Span text="forint, a kirándulás teljes költsége"></Span>
+                    <Span text=" 50000+4000x+xy " class="keplet"></Span>
+                    <Span text="forint."></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+          </StackLayout>
+
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</TabView>

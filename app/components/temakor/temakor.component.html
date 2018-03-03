@@ -14,7 +14,7 @@
       <FlexboxLayout flexWrap="wrap" justifyContent="space-around">
         <Image class="avatar avatar--big" src="~/assets/images/temakorok/{{ temakor.image }}" verticalAlignment="center"></Image>
       </FlexboxLayout>
-      <Label class="text-header center pb-10 pt-10" [text]="temakor.title" textWrap="true"></Label>
+      <Label class="h2 center pb-10 pt-10" [text]="temakor.title" textWrap="true"></Label>
     </StackLayout>
     <StackLayout class="list">
       <StackLayout *ngFor="let tema of temakor.temak">
