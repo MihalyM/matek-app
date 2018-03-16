@@ -6,11 +6,12 @@
 }
 
 .button-primary {
-  background-color: #f8d863;
-  border-color: #c2b785;
+  background-color: #f8c818;
+  border-color: #524e3c;
   border-radius: 3;
   border-width: 3;
   color: #524e3c;
+  font-weight: bold;
   padding: 10 0 10 0;
   width: 80%;
 }
@@ -20,7 +21,7 @@
   height: 110;
   border-radius: 55;
   border-width: 3;
-  background-color: #f8d863;
+  background-color: #f8c818;
   border-color: #524e3c;
   color: #524e3c;
 }
