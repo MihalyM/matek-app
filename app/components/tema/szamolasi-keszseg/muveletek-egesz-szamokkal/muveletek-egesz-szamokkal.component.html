@@ -8,43 +8,41 @@
   </StackLayout>
 </ActionBar>
 
-
 <TabView selectedIndex="0">
   <StackLayout *tabItem="{title: 'Egész számok összeadása és kivonása'}">
     <Label textWrap="true" text="Egész számok összeadása és kivonása" class="pt-10 h2 center"></Label>
     <ScrollView>
       <StackLayout class="tab-content">
-        <Label textWrap="true" text="Az egész számok fogalma" class="pt-10 h2 center"></Label>
-        <Label text="Az egész számok a negatív egészek, a pozitív egészek és a 0 (vagy másképp: a negatív egészek és a természetes számok). Az egész számok halmazának is végtelen sok eleme van és duppla szárú 'Z'-vel jelöljük"
-          textWrap="true"></Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-1
-        <Label textWrap="true" text="Venn-diagrammal szemléltethetjük a természetes számok halmazának és egész számok halmazának kapcsolatát. A természetes számok halmaza valódi részhalmaza az egész számok halmazának."></Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-2
+        <Label text="Az egész számok fogalma" class="pt-10 h2 center"></Label>
+        <Label class="pb-10" textWrap="true" text="Az egész számok a negatív egészek, a pozitív egészek és a 0 (vagy másképp: a negatív egészek és a természetes számok). Az egész számok halmazának is végtelen sok eleme van és duppla szárú 'Z'–vel jelöljük."></Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep1.png"></Image>
+        <Label class="pb-10" textWrap="true" text="Venn-diagrammal szemléltethetjük a természetes számok halmazának és egész számok halmazának kapcsolatát. A természetes számok halmaza valódi részhalmaza az egész számok halmazának."></Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep2.png"></Image>
         <Label textWrap="true" text="Egész számok összeadása" class="pt-10 h2 center"></Label>
-        <Label textWrap="true" class="text-block">
+        <Label class="text-block" textWrap="true">
           <FormattedString>
-            <Span text="Az összeadás, kivonás, szorzás és osztás a négy számtani"></Span>
-            <Span text=" alapművelet." class="bold"></Span>
+            <Span text="Az összeadás, kivonás, szorzás és osztás a négy számtani "></Span>
+            <Span text="alapművelet." class="bold"></Span>
           </FormattedString>
         </Label>
         <Label textWrap="true" text="Az egész számok összeadása egy kétváltozós művelet."></Label>
-        <Label textWrap="true" class="text-block">
+        <Label class="text-block" textWrap="true">
           <FormattedString>
-            <Span text="Az "></Span>
+            <Span text="Az"></Span>
             <Span text="összeadás " class="bold"></Span>
             <Span text="olyan matematikai művelet, amely során két mennyiséget összesítenek, illetve egy mennyiséghez hozzátesznek."></Span>
           </FormattedString>
         </Label>
         <Label textWrap="true" text="Az összeadás leggyakrabban használt jele a + (pluszjel)."></Label>
-        <Label textWrap="true" class="text-block">
+        <Label class="text-block" textWrap="true">
           <FormattedString>
-            <Span text="Az "></Span>
+            <Span text="Az"></Span>
             <Span text="összeadandó " class="bold"></Span>
             <Span text="tagokat összeadva megkapjuk az összeget. Az összeadandók "></Span>
             <Span text="felcserélhetőek." class="bold"></Span>
           </FormattedString>
         </Label>
-        <Label textWrap="true" class="text-block">
+        <Label class="text-block" textWrap="true">
           <FormattedString>
             <Span text="Pozitív egészek összege "></Span>
             <Span text="pozitív. " class="bold"></Span>
@@ -52,8 +50,54 @@
             <Span text="negatív." class="bold"></Span>
           </FormattedString>
         </Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-3
-
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep3.png"></Image>
+        <Label text="Egész számok kivonása" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="kivonás " class="bold"></Span>
+            <Span text="olyan matematikai művelet, amely során egy mennyiségből elvesznek, illetve két mennyiség különbségét meghatározzák."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="A kivonás leggyakrabban használt jele a - (mínuszjel). "></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="kisebbítendő " class="bold"></Span>
+            <Span text="tagból kivonjuk a "></Span>
+            <Span text="kivonandó " class="bold"></Span>
+            <Span text="tagot, így a kivonás eredményeként a "></Span>
+            <Span text="különbséget " class="bold"></Span>
+            <Span text="kapjuk meg. A kisebbítendő és a kivonandó nem cserélhető fel."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Már nem ütközünk problémába, mint korábban a természetes számoknál, "></Span>
+            <Span text="ha a kisebbítendő kisebb, mint a kivonandó, " class="bold"></Span>
+            <Span text="ugyanis ebben az esetben "></Span>
+            <Span text="a különbség negatív lesz." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep4.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Pozitív számok különbsége lehet "></Span>
+            <Span text="pozitív, 0 vagy negatív." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="5 - 3 = 2" class="center bold"></Label>
+        <Label textWrap="true" text="5 - 5 = 0" class="center bold"></Label>
+        <Label textWrap="true" text="3 - 5 = -2" class="center bold"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Negatív számok különbsége lehet "></Span>
+            <Span text="pozitív, 0 vagy negatív." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="-3 - (-5) = 2" class="center bold"></Label>
+        <Label textWrap="true" text="-5 - (-5) = 0" class="center bold"></Label>
+        <Label textWrap="true" text="-5 - (-3) = -2" class="center bold"></Label>
       </StackLayout>
     </ScrollView>
   </StackLayout>
@@ -63,49 +107,257 @@
     <Label textWrap="true" text="Egész számok szorzása és osztása" class="pt-10 h2 center"></Label>
     <ScrollView>
       <StackLayout class="tab-content">
-
+        <Label textWrap="true" text="Az egész számok körében végzett szorzással és osztással is nap mint nap találkozunk. Az alábbi ábrán egy bankszámla kivonat részletét láthatod. A “jóváírás” a számlára érkező pénzt, például a munkabért jelöli, a “terhelés” pedig az elköltött összegeket."></Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep5.png"></Image>
+        <Label textWrap="true" text="Az egész számok körében végzett alapműveletekkel általában a bevételek - adósságok, magasság - mélység vagy a hőmérséklet kapcsán kerülünk szembe. Ezenkívül fontos matematikai alapnak számít a későbbi matematikán belüli vagy természettudományos tanulmányokhoz."></Label>
+        <Label textWrap="true" text="Egész számok szorzása" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A természetes számokkal való "></Span>
+            <Span text="szorzást " class="bold"></Span>
+            <Span text="az ismételt összeadás rövid jelölésére vezették be. A természetes számok halmazán végzett műveletek az egész számok körében is érvényesek lesznek, ám kiegészítésre szorulnak, hiszen a negatív egész számok szorzását valahogyan értelmezni kell."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep6.png"></Image>
+        <Label textWrap="true" text="Az egész számok szorzásánál figyelembe kell venni az alábbi szabályokat:"></Label>
+        <Label textWrap="true" text="     Ha a szorzandót 0-val szorozzuk, a szorzat 0 lesz."></Label>
+        <Label text="a ⋅ 0 = 0" class="keplet center" textWrap="true"></Label>
+        <Label textWrap="true" text="     Ha a szorzandót 1-gyel szorozzuk, a szorzat megegyezik a szorzandó értékével."></Label>
+        <Label text="a ⋅ 1 = a" class="keplet center" textWrap="true"></Label>
+        <Label textWrap="true" text="     Ha a szorzandót -1-gyel szorozzuk, a szorzat megegyezik a szorzandó ellentettjével."></Label>
+        <Label text="a ⋅ (-1) = -a" class="keplet center" textWrap="true"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="      Pozitív egész számok szorzata "></Span>
+            <Span text="pozitív, " class="bold"></Span>
+            <Span text="akárhány tényezőből is álljon a szorzat."></Span>
+          </FormattedString>
+        </Label>
+        <Label text="(+) ⋅ (+) = (+)" class="keplet center" textWrap="true"></Label>
+        <Label text="2 ⋅ 4 = 8" class="keplet color-highlight-3 center" textWrap="true"></Label>
+        <Label text="2 ⋅ 3 ⋅ 4 = 24" class="keplet color-highlight-3 center" textWrap="true"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="      Egy pozitív egész szám és egy negatív egész szám szorzata "></Span>
+            <Span text="negatív. " class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label text="(+) ⋅ (-) = (-)" class="keplet center" textWrap="true"></Label>
+        <Label class="keplet center" textWrap="true">
+          <FormattedString>
+            <Span text="2 ⋅ (" class="keplet color-highlight-3 center"></Span>
+            <Span text="-4) = -8" class="keplet color-highlight-2 center "></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true">
+          <FormattedString>
+            <Span text="-4 ⋅ " class="keplet color-highlight-2 center"></Span>
+            <Span text="2 = " class="keplet color-highlight-3 center "></Span>
+            <Span text="-8" class="keplet color-highlight-2 center"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="      Negatív egész számok szorzata lehet "></Span>
+            <Span text="pozitív vagy negatív " class="bold"></Span>
+            <Span text="attól függően, hogy hány tényezőből áll a szorzat. Ha a szorzatban a tényezők darabszáma páros, akkor a szorzat pozitív, míg ha páratlan, akkor a szorzat negatív."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true">
+          <FormattedString>
+            <Span text="-2 ⋅ (-4) = " class="keplet color-highlight-2 center"></Span>
+            <Span text="8" class="keplet color-highlight-3 center "></Span>
+          </FormattedString>
+        </Label>
+        <Label text="-2 ⋅ (-3) ⋅ (-4) = (-24) " class="keplet color-highlight-2 center" textWrap="true"></Label>
+        <Label text="Egész számok osztása" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az egész számok körében értelmezünk "></Span>
+            <Span text="maradék nélküli " class="bold"></Span>
+            <Span text="és "></Span>
+            <Span text="maradékos osztást. " class="bold"></Span>
+            <Span text="Például "></Span>
+            <Span text="14" class="bold"></Span>
+            <Span text="-ben a  "></Span>
+            <Span text="2" class="bold"></Span>
+            <Span text="megvan maradék nélkül: "></Span>
+            <Span text="14 : 2 = 7, " class="bold"></Span>
+            <Span text="de "></Span>
+            <Span text="14" class="bold"></Span>
+            <Span text="-ben a"></Span>
+            <Span text="3 " class="bold"></Span>
+            <Span text="már nem: "></Span>
+            <Span text="14 : 3 = 4, " class="bold"></Span>
+            <Span text="maradék "></Span>
+            <Span text="2." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Az egész számok osztásánál figyelembe kell venni az alábbi szabályokat:"></Label>
+        <Label textWrap="true" text="     A 0-val való osztást nem értelmezzük, de a 0-t bármilyen 0-tól különböző számmal oszthatjuk, a hányados 0 lesz."></Label>
+        <Label class="keplet center" textWrap="true">
+          <FormattedString>
+            <Span text="a : 0 = nem értelmezzük" class="keplet center"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="a : 0 = 0, ha a nem egyenlő 0-val." class=" keplet center"></Label>
+        <Label textWrap="true" text="     Ha az osztandót 1-gyel osztjuk, a hányados megegyezik az osztandó értékével."></Label>
+        <Label textWrap="true" text="a : 1 = a" class=" keplet center"></Label>
+        <Label textWrap="true" text="Ha az osztandót -1-gyel osztjuk, a hányados megegyezik az osztandó ellentettjével."></Label>
+        <Label textWrap="true" text="a : -1 = -a" class=" keplet center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Pozitív egész számok hányadosa "></Span>
+            <Span text="pozitív." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="8 : 4 = 2" class=" keplet color-highlight-3 center "></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ellentétes előjelű egész számok hányadosa "></Span>
+            <Span text="negatív." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true">
+          <FormattedString>
+            <Span text="8 : (" class="keplet color-highlight-3 center"></Span>
+            <Span text="-4) = -2" class="keplet color-highlight-2 center "></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true">
+          <FormattedString>
+            <Span text="-8 : " class="keplet color-highlight-2 center"></Span>
+            <Span text="2 = (" class="keplet color-highlight-3 center "></Span>
+            <Span text="-4)" class="keplet color-highlight-2 center"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Negatív egész számok hányadosa "></Span>
+            <Span text="pozitív." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true">
+          <FormattedString>
+            <Span text="-8 : (-4) = " class="keplet color-highlight-2 center"></Span>
+            <Span text="2" class="keplet color-highlight-3 center "></Span>
+          </FormattedString>
+        </Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep7.png"></Image>
       </StackLayout>
     </ScrollView>
   </StackLayout>
 
 
-  <StackLayout *tabItem="{title: 'Egész számok szorzása és osztása'}">
-    <Label textWrap="true" text="Egész számok szorzása és osztása" class="pt-10 h2 center"></Label>
+  <StackLayout *tabItem="{title: 'Összeg, különbség szorzása és osztása egész számmal'}">
+    <Label text="Összeg, különbség szorzása és osztása egész számmal" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="Feladatok megoldása során találkozunk olyan esetekkel, amelyekben egész számok összegét vagy különbségét kell osztani egyetlen egész számmal. Természetesen a 0-val való osztást továbbra sem értelmezzük, és van néhány szabály, amelyeket szem előtt kell tartani!"></Label>
+        <Label class="keplet center" textWrap="true" text="(a + b) ⋅ c = a ⋅ c + b ⋅ c"></Label>
+        <Label class="keplet center" textWrap="true" text="(a - b) ⋅ c = a ⋅ c - b ⋅ c"></Label>
+        <Label class="keplet center" textWrap="true" text="(a + b) : c = a : c + b : c"></Label>
+        <Label class="keplet center" textWrap="true" text="(a - b) : c = a : c - b : c"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Összeget " class="bold"></Span>
+            <Span text="szorozhatunk egész számmal úgy is, hogy az összeadandókat külön-külön megszorozzuk, majd a szorzatokat összeadjuk."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true" text="(a + b) ⋅ c = a ⋅ c + b ⋅ c"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Különbséget " class="bold"></Span>
+            <Span text="szorozhatunk egész számmal úgy is, hogy a kisebbítendőt és a kivonandót külön-külön megszorozzuk, majd a szorzatokat kivonjuk egymásból."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true" text="(a - b) ⋅ c = a ⋅ c - b ⋅ c"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Összeget " class="bold"></Span>
+            <Span text="oszthatunk egész számmal úgy is, hogy az összeadandókat külön-külön elosztjuk, majd a hányadosokat összeadjuk."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true" text="(a + b) : c = a : c + b : c"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Különbséget " class="bold"></Span>
+            <Span text="oszthatunk egész számmal úgy is, hogy a kisebbítendőt és a kivonandót külön-külön elosztjuk, majd a hányadosokat kivonjuk egymásból."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="keplet center" textWrap="true" text="(a - b) : c = a : c - b : c"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az eljárások során külön oda kell figyelni az "></Span>
+            <Span text="előjelekre, " class="bold"></Span>
+            <Span text="mert gyakori hiba, hogy lehagyunk egy műveleti jelet, ami miatt helytelen eredményt kapunk."></Span>
+          </FormattedString>
+        </Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Műveletek sorrendje'}">
+    <Label text="Műveletek sorrendje" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="Egy műveletsort látva fontos tudni, hogyan kezdj neki a megoldásának, vagyis milyen sorrendben végezd el a benne szereplő műveleteket. Ha ugyanis erre nem figyelsz oda, nem a helyes eredményt kapod meg. Számológépet használva is fontos ennek külön figyelmet szentelni, hiszen nem mindegy, hogy milyen sorrendben írod be a kiszámítandó műveleteket, a számokat, illetve hogy használod-e a zárójeleket."></Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep8.png"></Image>
+        <Label text="Műveletek sorrendje az egész számok körében" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ha a műveletsor "></Span>
+            <Span text="csak összeadást és kivonást " class="bold"></Span>
+            <Span text="tartalmaz, akkor "></Span>
+            <Span text=" balról jobbra " class="bold"></Span>
+            <Span text="kell haladni, mint ahogyan akkor is, ha a műveletsorban "></Span>
+            <Span text="csak szorzás és osztás " class="bold"></Span>
+            <Span text="található."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep9.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ha a műveletsor tartalmaz "></Span>
+            <Span text="összeadást vagy kivonást, " class="bold"></Span>
+            <Span text="valamint "></Span>
+            <Span text="szorzást vagy osztást, " class="bold"></Span>
+            <Span text="esetleg mind a négy alapművelet szerepel benne vegyesen, "></Span>
+            <Span text="először " class="bold"></Span>
+            <Span text="mindig a "></Span>
+            <Span text="szorzást és osztást " class="bold"></Span>
+            <Span text="kell elvégezni "></Span>
+            <Span text="balról jobbra " class="bold"></Span>
+            <Span text="haladva, majd az "></Span>
+            <Span text="összeadást és kivonást " class="bold"></Span>
+            <Span text="ugyancsak "></Span>
+            <Span text="balról jobbra " class="bold"></Span>
+            <Span text="haladva. "></Span>
+          </FormattedString>
+        </Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep10.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ha a műveletsor "></Span>
+            <Span text="zárójelet " class="bold"></Span>
+            <Span text="is tartalmaz, mindig a zárójelen "></Span>
+            <Span text="belüli " class="bold"></Span>
+            <Span text="műveletekkel kell kezdeni. Ha a zárójel zárójelet vagy zárójeleket tartalmaz, akkor a "></Span>
+            <Span text="legbelső zárójellel " class="bold"></Span>
+            <Span text="kell kezdeni a műveletsor elvégzését."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="pb-10 center" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-egesz-szamokkal/muveletek-egesz-szamokkal-kep11.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Feladatok'}">
+    <Label text="Feladatok" class="pt-10 h2 center"></Label>
     <ScrollView>
       <StackLayout class="tab-content">
 
       </StackLayout>
     </ScrollView>
   </StackLayout>
-
-
-  <StackLayout *tabItem="{title: 'Egész számok szorzása és osztása'}">
-    <Label textWrap="true" text="Egész számok szorzása és osztása" class="pt-10 h2 center"></Label>
-    <ScrollView>
-      <StackLayout class="tab-content">
-
-      </StackLayout>
-    </ScrollView>
-  </StackLayout>
-
-
-
-
-
-
-
-
-
-
-
 </TabView>
-<ScrollView>
-  <StackLayout class="page-wrapper">
-    <StackLayout class="pt-10">
-      <Label class="h2" [text]="tema.title" textWrap="true"></Label>
-      <StackLayout>
-
-      </StackLayout>
-    </StackLayout>
-  </StackLayout>
-</ScrollView>
