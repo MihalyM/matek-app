@@ -72,6 +72,10 @@
   padding: 10;
 }
 
+.nowrap{
+  white-space: nowrap;
+}
+
 .color-highlight-1 {
   color: #297941;
 }
@@ -82,4 +86,12 @@
 
 .color-highlight-3 {
   color: #831a63;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
 }
