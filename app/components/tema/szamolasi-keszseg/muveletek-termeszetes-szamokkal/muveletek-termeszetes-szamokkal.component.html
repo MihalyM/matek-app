@@ -8,13 +8,525 @@
   </StackLayout>
 </ActionBar>
 
-<ScrollView>
-  <StackLayout class="page-wrapper">
-    <StackLayout class="pt-10">
-      <Label class="h2" [text]="tema.title" textWrap="true"></Label>
-      <StackLayout>
+<TabView selectedIndex="0">
+  <StackLayout *tabItem="{title: 'Bevezetés'}">
+    <Label textWrap="true" text="Bevezetés" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
 
+        <Label textWrap="true" text="A számolási készséged folyamatosan fejlesztened kell, hiszen a számolás kikerülhetetlenül és gyakran észrevétlenül hozzátartozik mindennapi életünkhöz. Későbbi tanulmányaid szempontjából is elengedhetetlen a precíz, pontos számolás nemcsak a matematika határain belül, hanem a természettudományok (fizika, biológia, kémia) területén is."></Label>
+
+        <Label class="definition text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az összeadás, kivonás, szorzás és osztás a négy számtani "></Span>
+            <Span text="alapművelet." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="A természetes számokkal való számolás, a dolgok megszámlálása, már az őskorban megjelent. Számon kellett tartani az állatokat, összevetni a zsákmányt a törzs létszámával. Régészeti, történeti források szerint az ősember a dolgok megszámolására az ujjait használta. Az ujj latin neve digitus, ebből ered a számjegy angol elnevezése a digit is."></Label>
+        <Label textWrap="true" text="A nagyobb mennyiségeket fára, csontra vésett rovásokkal jelölték. A magyar pásztorok még a múlt század közepén is használták ezt a jelölési módot. Az alábbi ábrán a 19. század végén, a 20. sz elején az Alföldön és Erdélyben használt pásztorrovások láthatók."></Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-1
+        <Label textWrap="true" text="Az egyes rovásfajták, hasonlóan a római számokhoz, meghatározott mennyiségeket ( stb jelölnek), tehát a pásztorrovás nem helyi értékes számolás."></Label>
+        <Label textWrap="true" text="Az első számolási művelet az összeadás és a kivonás volt, ezekhez köveket, kagylókat, fonalat használtak."></Label>
+        <Label textWrap="true" text="A szorzásról az egyik legkorábbi régészeti emlék a Rhind-papirusz, más néven Ahmesz-papirusz. Az első elnevezés a papirusz megtalálóját, a skót Henry Rhindet, a második a papirusz i.e.  körül élt íróját, az egyiptomi Ahmesz (vagy Jahmesz) írnokot jelöli."></Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-2
+        <Label textWrap="true" text="A papiruszon 85 példába foglalva, számolástechnikai eljárások (ezek között található egy speciális szorzási módszertan is) elsőfokú, egy ismeretlenes egyenletek megoldása, terület és térfogat szá-mítási feladat található."></Label>
+        <Label textWrap="true" text="Több régészeti emlék is bizonyítja, hogy a legrégebbi ókori kultúrákban, Egyiptomban, Indiában már léteztek használható eljárások osztási feladatok megoldására is."></Label>
       </StackLayout>
-    </StackLayout>
+    </ScrollView>
   </StackLayout>
-</ScrollView>
+
+  <StackLayout *tabItem=" {title: 'Természetes számok összeadása és kivonása'} ">
+    <Label textWrap="true" text="Természetes számok összeadása és kivonása " class="pt-10 h2 center "></Label>
+    <ScrollView>
+      <StackLayout class="tab-content ">
+        <Label textWrap="true" text="A természetes számok körében végzett összeadás és kivonás elkerülhetetlenül része az életednek. Gondolj arra, amikor a postán csekkeket adsz fel, vagy a napi bevitt kalóriamennyiséget próbálod meghatározni, vagy éppen a boltban megkapod a visszajárót."></Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-3
+        <Label textWrap="true" text="A természetes számok fogalma" class="pt-10 h2 center"></Label>
+        <Label class="definition text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A természetes számok: a pozitív egész számok és a nulla. A halmazba tehát végtelen sok szám tartozik. A természetes számok halmazát duplaszárú 'N'-nel jelöljük."></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> // kép-4
+        <Label textWrap="true" text="A három pont megállapodás szerint azt jelenti, hogy a felsorolás a végtelenségig folytatható."></Label>
+        <Label textWrap="true" text="Természetes számok összeadása" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Az összeadás, kivonás, szorzás és osztás a négy számtani"></Span>
+            <Span text=" alapművelet." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="A természetes számok összeadása egy"></Span>
+            <Span text=" kétváltozós művelet." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Az"></Span>
+            <Span text=" összeadás" class="bold"></Span>
+            <Span text=" olyan matematikai művelet, amely során két mennyiséget összesítenek, illetve egy mennyiséghez hozzátesznek."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Az összeadás leggyakrabban használt jele a (+) (pluszjel)."></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Az"></Span>
+            <Span text=" összeadandó" class="bold"></Span>
+            <Span text=" tagokat összeadva megkapjuk az "></Span>
+            <Span text="összeget." class="bold"></Span>
+            <Span text=" Az összeadandók felcserélhetőek."></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-5
+        <Label textWrap="true" text="Természetes számok kivonása" class="pt-10 h2 center"></Label>
+        <Label>
+          <FormattedString>
+            <Span text="A természetes számok kivonása egy"></Span>
+            <Span text=" kétváltozós művelet." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="A"></Span>
+            <Span text=" kivonás" class="bold"></Span>
+            <Span text=" olyan matematikai művelet, amely során egy mennyiségből elvesznek, illetve két mennyiség különbségét meghatározzák."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="A kivonás leggyakrabban használt jele a (-) (mínuszjel)."></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="A"></Span>
+            <Span text=" kisebbítendő" class="bold"></Span>
+            <Span text=" tagból kivonjuk a  "></Span>
+            <Span text="kivonandó" class="bold"></Span>
+            <Span text=" tagot, így a kivonás eredményeként a  "></Span>
+            <Span text="különbséget " class="bold"></Span>
+            <Span text="kapjuk meg. A kisebbítendő és a kivonandó nem cserélhető fel."></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-6
+        <Label textWrap="true" text="A természetes számok körében a kivonandó nem lehet nagyobb a kisebbítendőnél, máskülönben a kivonást nem lehet elvégezni."></Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Természetes számok szorzása és osztása'} ">
+    <Label textWrap="true" text="Természetes számok szorzása és osztása " class="pt-10 h2 center "></Label>
+    <ScrollView>
+      <StackLayout class="tab-content ">
+        <Label textWrap="true" text="A természetes számok körében végzett szorzással és osztással nap mint nap találkozol. Például amikor 3 tepsi muffint sütsz, de a recept csak 1 tepsihez írja elő a hozzávalókat, neked kell megháromszorozni a megadott mennyiségeket. Vagy amikor egy kártyajátéknál az egész paklit kell leosztani úgy, hogy mindenkinek ugyanannyi lap jusson, és előre ki kell számolnod, hogy egy játékosnak hány kártyája lesz."></Label>
+        <Label textWrap="true" text="Természetes számok szorzása" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Az összeadás, kivonás, szorzás és osztás a négy számtani"></Span>
+            <Span text=" alapművelet." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="A természetes számok szorzása egy kétváltozós művelet."></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="A természetes számokkal való szorzást az ismételt összeadás rövid jelölésére vezetjük be. A szorzás leggyakrabban használt jele a "></Span>
+            <Span text="⋅" class="keplet"></Span>
+            <Span text=" (szorzásjel)."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="A"></Span>
+            <Span text=" szorzandó " class="bold"></Span>
+            <Span text="tényezőt szorozzuk a "></Span>
+            <Span text="szorzó " class="bold"></Span>
+            <Span text="tényezővel, és a szorzás eredményeként a "></Span>
+            <Span text="szorzatot " class="bold"></Span>
+            <Span text="kapjuk meg."></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-7
+        <Label textWrap="true" text="Az ismételt összeadásból adódnak a műveleti szabályok:"></Label>
+        <Label textWrap="true" text="    - A szorzás tagjai felcserélhetőek."></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="   - Ha a szorzandót "></Span>
+            <Span text="0" class="bold"></Span>
+            <Span text="-val szorozzuk, a szorzat"></Span>
+            <Span text=" 0" class="bold"></Span>
+            <Span text=" lesz."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="   - Ha a szorzandót "></Span>
+            <Span text="1" class="bold"></Span>
+            <Span text="-gyel szorozzuk, a szorzat megegyezik a szorzandó értékével."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Természetes számok osztása" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="A négy "></Span>
+            <Span text="számtani alapművelet " class="bold"></Span>
+            <Span text="az összeadás, kivonás, szorzás és osztás."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="A természetes számok osztása egy kétváltozós művelet."></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Az osztás olyan matematikai művelet, amely során egy mennyiséget egyenlő részekre bontunk. Az osztás leggyakrabban használt jele az "></Span>
+            <Span text=": " class="bold"></Span>
+            <Span text="(osztásjel). Az osztást jelölhetjük törttel is, hiszen a törtvonal osztást jelent."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Az"></Span>
+            <Span text=" osztandó " class="bold"></Span>
+            <Span text="tényezőt osztjuk az "></Span>
+            <Span text="osztó " class="bold"></Span>
+            <Span text="tényezővel, és az osztás eredményeként a "></Span>
+            <Span text="hányadost " class="bold"></Span>
+            <Span text="kapjuk meg. Az osztandó és az osztó "></Span>
+            <Span text="nem " class="bold"></Span>
+            <Span text="cserélhetőek fel."></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image>//kép-8
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="A természetes számok körében értelmezünk "></Span>
+            <Span text="maradék nélküli " class="bold"></Span>
+            <Span text="és "></Span>
+            <Span text="maradékos osztást " class="bold"></Span>
+            <Span text="is."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="14" class="bold"></Span>
+            <Span text="-ben a "></Span>
+            <Span text="2 " class="bold"></Span>
+            <Span text="megvan maradék nélkül"></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> // kép-9
+        <Label text="DE" class="bold"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="14" class="bold"></Span>
+            <Span text="-ben a "></Span>
+            <Span text="3 " class="bold"></Span>
+            <Span text="már nincs meg maradék nélkül"></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> // kép-10
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="ahol a maradék a "></Span>
+            <Span text="2." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="A 0-val való osztást nem értelmezzük, de 0-t bármilyen 0-tól különböző számmal oszthatjuk, a hányados 0 lesz."
+          class="bold"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Ha az osztandót "></Span>
+            <Span text="1" class="bold"></Span>
+            <Span text="-gyel osztjuk, a hányados megegyezik az osztandó értékével."></Span>
+          </FormattedString>
+        </Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Összeg vagy különbség szorzása, osztása'} ">
+    <Label textWrap="true" text="Összeg vagy különbség szorzása, osztása " class="pt-10 h2 center "></Label>
+    <ScrollView>
+      <StackLayout class="tab-content ">
+        <Label textWrap="true" text="Nap mint nap találkozhatsz olyan esetekkel, amikor összeget vagy különbséget kell osztani természetes számmal, például ha olyan italokat veszel, amelyek visszaváltható üvegekben vannak (bizonyos szörpök, sörök stb.), és szeretnéd megtudni, mennyibe kerül a betétdíj nélküli termék. A blokkon látszik, mennyit kellett összesen fizetni a betétdíjjal együtt a termékekért, és az is, mennyi a betétdíj összesen."></Label>
+        <Label textWrap="true" text="Összeg, különbség szorzása és osztása természetes számmal" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Összeget szorozhatunk" class="bold"></Span>
+            <Span text=" természetes számmal úgy is, hogy az összeadandókat külön-külön megszorozzuk, majd a szorzatokat összeadjuk."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="(a + b) ⋅ c = a ⋅ c + b ⋅ c" class="keplet"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Különbséget szorozhatunk" class="bold"></Span>
+            <Span text=" természetes számmal úgy is, hogy a kisebbítendőt és a kivonandót külön-külön megszorozzuk, majd a szorzatokat kivonjuk egymásból."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="(a - b) ⋅ c = a ⋅ c - b ⋅ c" class="keplet"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Összeget oszthatunk" class="bold"></Span>
+            <Span text=" természetes számmal úgy is, hogy az összeadandókat külön-külön elosztjuk, majd a hányadosokat összeadjuk."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="(a + b) : c = a : c + b : c" class="keplet"></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Különbséget oszthatunk" class="bold"></Span>
+            <Span text=" természetes számmal úgy is, hogy a kisebbítendőt és a kivonandót külön-külön elosztjuk, majd a hányadosokat kivonjuk egymásból."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="(a - b) : c = a : c - b : c" class="keplet"></Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Műveletek sorrendje'} ">
+    <Label textWrap="true" text="Műveletek sorrendje " class="pt-10 h2 center "></Label>
+    <ScrollView>
+      <StackLayout class="tab-content ">
+        <Label textWrap="true" text="Egy műveletsort látva fontos tudni, hogyan kezdj neki a megoldásának, vagyis milyen sorrendben végezd el a benne szereplő műveleteket. Ha ugyanis erre nem figyelsz oda, nem a helyes eredményt kapod meg. Számológépet használva is fontos ennek külön figyelmet szentelni, hiszen nem mindegy, hogy milyen sorrendben írod be a kiszámítandó műveleteket, illetve a számokat."></Label>
+        <Label textWrap="true" text="A műveletek sorrendje a természetes számkörben" class="pt-10 h2 center "></Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-11
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Ha a műveletsor "></Span>
+            <Span text="csak összeadást és kivonást " class="bold"></Span>
+            <Span text="tartalmaz, akkor "></Span>
+            <Span text="balról jobbra " class="bold"></Span>
+            <Span text="kell haladni, mint ahogyan akkor is, ha a műveletsorban csak "></Span>
+            <Span text="szorzás és osztás  " class="bold"></Span>
+            <Span text="található."></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-12
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Ha a műveletsor tartalmaz  "></Span>
+            <Span text="összeadást vagy kivonást, " class="bold"></Span>
+            <Span text="valamint "></Span>
+            <Span text="szorzást vagy osztást, " class="bold"></Span>
+            <Span text="esetleg mind a négy alapművelet szerepel benne vegyesen, "></Span>
+            <Span text="először " class="bold"></Span>
+            <Span text="mindig "></Span>
+            <Span text=" a szorzást és osztást " class="bold"></Span>
+            <Span text="kell elvégezni "></Span>
+            <Span text="balról jobbra " class="bold"></Span>
+            <Span text="haladva, majd az "></Span>
+            <Span text="összeadást és kivonást " class="bold"></Span>
+            <Span text="ugyancsak "></Span>
+            <Span text="balról jobbra " class="bold"></Span>
+            <Span text="haladva."></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-13
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Ha a műveletsor "></Span>
+            <Span text="zárójelet " class="bold"></Span>
+            <Span text="is tartalmaz, először ennek a felbontására kell sort keríteni. Az egyik lehetőség, hogy először a zárójelen belüli műveleteket végzed el, majd ezek eredményével végzed el a zárójelekben lévő kifejezésre vonatkozó műveleteket."></Span>
+          </FormattedString>
+        </Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> // kép-14
+        <Label textWrap="true" text="Ha ugyanis a zárójel balról vagy jobbról egy természetes számmal megszorozzuk, akkor a zárójelen belül minden tagot meg kell szorozni ezzel a természetes számmal."></Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-15
+        <Label textWrap="true" text="A másik lehetőség, hogy a zárójelben lévő kifejezések minden tagján elvégzed a zárójel előtt, vagy mögött álló műveleteket, és utána végzed el az összevonásokat."></Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-16
+        <Label textWrap="true" text="Mert:"></Label>
+        <Label text="a ⋅ (b + c) = a ⋅ b + a ⋅ c" class="keplet center" textWrap="true"></Label>
+        <Label text="a ⋅ (b - c) = a ⋅ b - a ⋅ c" class="keplet center" textWrap="true"></Label>
+        <Label text="(b + c) : a = a : b + a : c" class="keplet center" textWrap="true"></Label>
+        <Label text="(b - c) : a = a : b - a : c" class="keplet center" textWrap="true"></Label>
+        <Label textWrap="true" text="A kivonás és az osztás eredménye sok esetben kivezet a természetes számok köréből, mert előfordulhat, hogy az eredmény negatív, vagy tört szám lesz."></Label>
+        <Label textWrap="true" class="text-block">
+          <FormattedString>
+            <Span text="Ha a zárójel másik zárójelet vagy zárójeleket tartalmaz, akkor a "></Span>
+            <Span text="legbelső zárójel " class="bold"></Span>
+            <Span text="felbontásával kell a műveletsor elvégzését kezdeni, a fent leírtak szerint."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> // kép-17
+        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> // kép-18
+        <Label textWrap="true" text="A kivonás és az osztás eredménye sok esetben kivezet a természetes számok köréből, mert előfordulhat, hogy az eredmény negatív, vagy tört szám lesz."></Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Feladatok'} ">
+    <Label textWrap="true" text="Feladatok " class="pt-10 h2 center "></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+
+        <StackLayout class="feladatok">
+          <Label class="feladat-valaszto" text="Bevásárlás" (tap)="feladatValaszto(1)"></Label>
+
+          <StackLayout class="feladat" *ngIf="activFeladat === 1">
+            <Label class="text" textWrap="true" text="A pénztárnál sorban álló anyuka megkérte két fiát, számolják össze, mennyi pénzt vonnak le a bankkártyáról, ha a bevásárlókocsiba rakodott cikkeket mind megveszik. Az egyik fiú gyorsabb volt, mint a másik."></Label>
+            <Label class="text" textWrap="true" text="Vajon hogyan számolhatott az a fiú, aki előbb kiszámolta a végösszeget?"></Label>
+            <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true" text="Állapítsd meg, hogy mely termékek árával érdemes kezdeni az összeadást!"></label>
+              <Button class="button button-primary" text="Megoldás" (tap)="megoldasValaszto(1)"></Button>
+              <StackLayout *ngIf="megoldasok[1]">
+                <Label class="text" textWrap="true" text="A kenyér és a narancslé árával érdemes kezdeni."></Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true" text="Érdemes azzal a két értékkel kezdeni az összeadást, ahol az összeg 0-ra fog végződni. A kenyér és narancslé együttes ára fog 0-ra végződni."></Label>
+                <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <Label class="kerdes" textWrap="true">
+                <FormattedString>
+                  <Span text="Jelölje"></Span>
+                  <Span text=" x " class="keplet"></Span>
+                  <Span text="a kirándulók számát. Add meg, hogy mi lehet az"></Span>
+                  <Span text=" x " class="keplet"></Span>
+                  <Span text="változó alaphalmaza!"></Span>
+                </FormattedString>
+              </Label>
+              <Button class="button button-primary" text="Megoldás" (tap)="megoldasValaszto(2)"></Button>
+              <StackLayout *ngIf="megoldasok[2]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="Az"></Span>
+                    <Span text=" x " class="keplet"></Span>
+                    <Span text=" változó alaphalmaza a pozitív egész számok."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kirándulók száma nem lehet negatív vagy 0, továbbá nem vehet részt a kiránduláson nem egész számú ember, azaz"></Span>
+                    <Span text=" x " class="keplet"></Span>
+                    <Span text="csak pozitív egész szám lehet."></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true" text="Írd fel algebrai kifejezéssel, hogy mennyibe fog kerülni összesen a kiránduláson részt vevők szállása!"></label>
+              <Button class="button button-primary" text="Megoldás" (tap)="megoldasValaszto(3)"></Button>
+              <StackLayout *ngIf="megoldasok[3]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kiránduláson részt vevők szállása összesen:"></Span>
+                    <Span text=" 4000x" class="keplet"></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A szállás teljes költségét megkapod, ha egy fő szállásának díját megszorzod a résztvevők számával."></Span>
+                    <Span text="Ez"></Span>
+                    <Span text=" 4000⋅x " class="keplet"></Span>
+                    <Span text="röviden"></Span>
+                    <Span text=" 4000x" class="keplet"></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true">
+                <FormattedString>
+                  <Span text="Jelölje"></Span>
+                  <Span text=" y " class="keplet"></Span>
+                  <Span text="egy fő étkezésének a díját. Add meg, mi lehet az"></Span>
+                  <Span text=" y " class="keplet"></Span>
+                  <Span text="változó alaphalmaza!"></Span>
+                </FormattedString>
+              </label>
+              <Button class="button button-primary" text="Megoldás" (tap)="megoldasValaszto(4)"></Button>
+              <StackLayout *ngIf="megoldasok[4]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="Az"></Span>
+                    <Span text=" y " class="keplet"></Span>
+                    <Span text="változó alaphalmaza a pozitív egész számok."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span textWrap="true" text="Az étkezés ára nem lehet negatív vagy 0 , továbbá az étel ára nem lehet nem egész számú forint, azaz y csak pozitív egész szám lehet."></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true">
+                <FormattedString>
+                  <Span text="Jelölje"></Span>
+                  <Span text=" y " class="keplet"></Span>
+                  <Span text="egy fő étkezésének a díját. Írd fel algebrai kifejezéssel, mennyibe fog kerülni összesen a kiránduláson részt vevők étkezése!"></Span>
+                </FormattedString>
+              </label>
+              <Button class="button button-primary" text="Megoldás" (tap)="megoldasValaszto(5)"></Button>
+              <StackLayout *ngIf="megoldasok[5]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kiránduláson részt vevők étkezése összesen"></Span>
+                    <Span text=" xy " class="keplet"></Span>
+                    <Span text="forintba fog kerülni."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="Az étkezés teljes költségét megkapod, ha a résztvevők számát megszorzod egy fő étkezésének az árával."></Span>
+                    <Span text="Ez"></Span>
+                    <Span text=" x⋅y " class="keplet"></Span>
+                    <Span text=", röviden"></Span>
+                    <Span text=" xy " class="keplet"></Span>
+                    <Span text="."></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="megoldas">
+              <label class="kerdes" textWrap="true">
+                <FormattedString>
+                  <Span text="Írd fel algebrai kifejezéssel, hogy mennyi a kirándulás teljes költsége!"></Span>
+                </FormattedString>
+              </label>
+              <Button class="button button-primary" text="Megoldás" (tap)="megoldasValaszto(6)"></Button>
+              <StackLayout *ngIf="megoldasok[6]">
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kirándulás teljes költségét az"></Span>
+                    <Span text=" 50000+4000x+xy " class="keplet"></Span>
+                    <Span text="algebrai kifejezés írja le."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text bold" textWrap="true" text="Magyarázat:"></Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="A kirándulás teljes költségét megkapod, ha az utazás, a szállás és az étkezés költségeit összeadod."></Span>
+                  </FormattedString>
+                </Label>
+                <Label class="text" textWrap="true">
+                  <FormattedString>
+                    <Span text="Mivel az utazás teljes költsége"></Span>
+                    <Span text=" 50000 " class="keplet"></Span>
+                    <Span text="forint, a szállásé"></Span>
+                    <Span text=" 4000x " class="keplet"></Span>
+                    <Span text="forint, az étkezésé pedig"></Span>
+                    <Span text=" xy " class="keplet"></Span>
+                    <Span text="forint, a kirándulás teljes költsége"></Span>
+                    <Span text=" 50000+4000x+xy " class="keplet"></Span>
+                    <Span text="forint."></Span>
+                  </FormattedString>
+                </Label>
+              </StackLayout>
+            </StackLayout>
+
+          </StackLayout>
+
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</TabView>
