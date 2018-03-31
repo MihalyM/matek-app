@@ -108,7 +108,7 @@
     <ScrollView>
       <StackLayout class="tab-content">
         <Label textWrap="true" text="Az egész számok körében végzett szorzással és osztással is nap mint nap találkozunk. Az alábbi ábrán egy bankszámla kivonat részletét láthatod. A “jóváírás” a számlára érkező pénzt, például a munkabért jelöli, a “terhelés” pedig az elköltött összegeket."></Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-5
+        <Image src="~/assets/images/icons/chevron-left.png" class="center"></Image>
         <Label textWrap="true" text="Az egész számok körében végzett alapműveletekkel általában a bevételek - adósságok, magasság - mélység vagy a hőmérséklet kapcsán kerülünk szembe. Ezenkívül fontos matematikai alapnak számít a későbbi matematikán belüli vagy természettudományos tanulmányokhoz."></Label>
         <Label textWrap="true" text="Egész számok szorzása" class="pt-10 h2 center"></Label>
         <Label class="text-block" textWrap="true">
@@ -118,7 +118,7 @@
             <Span text="az ismételt összeadás rövid jelölésére vezették be. A természetes számok halmazán végzett műveletek az egész számok körében is érvényesek lesznek, ám kiegészítésre szorulnak, hiszen a negatív egész számok szorzását valahogyan értelmezni kell."></Span>
           </FormattedString>
         </Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-6
+        <Image src="~/assets/images/icons/chevron-left.png" class="center"></Image>
         <Label textWrap="true" text="Az egész számok szorzásánál figyelembe kell venni az alábbi szabályokat:"></Label>
         <Label textWrap="true" text="     Ha a szorzandót 0-val szorozzuk, a szorzat 0 lesz."></Label>
         <Label text="a ⋅ 0 = 0" class="keplet center" textWrap="true"></Label>
@@ -243,7 +243,7 @@
             <Span text="2" class="keplet color-highlight-3 center "></Span>
           </FormattedString>
         </Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-7
+        <Image src="~/assets/images/icons/chevron-left.png" class="center"></Image>
       </StackLayout>
     </ScrollView>
   </StackLayout>
@@ -302,7 +302,7 @@
     <ScrollView>
       <StackLayout class="tab-content">
         <Label textWrap="true" text="Egy műveletsort látva fontos tudni, hogyan kezdj neki a megoldásának, vagyis milyen sorrendben végezd el a benne szereplő műveleteket. Ha ugyanis erre nem figyelsz oda, nem a helyes eredményt kapod meg. Számológépet használva is fontos ennek külön figyelmet szentelni, hiszen nem mindegy, hogy milyen sorrendben írod be a kiszámítandó műveleteket, a számokat, illetve hogy használod-e a zárójeleket."></Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-8
+        <Image src="~/assets/images/icons/chevron-left.png" class="center"></Image>
         <Label text="Műveletek sorrendje az egész számok körében" class="pt-10 h2 center"></Label>
         <Label class="text-block" textWrap="true">
           <FormattedString>
@@ -315,7 +315,7 @@
             <Span text="található."></Span>
           </FormattedString>
         </Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-9
+        <Image src="~/assets/images/icons/chevron-left.png" class="center"></Image>
         <Label class="text-block" textWrap="true">
           <FormattedString>
             <Span text="Ha a műveletsor tartalmaz "></Span>
@@ -335,7 +335,7 @@
             <Span text="haladva. "></Span>
           </FormattedString>
         </Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-10
+        <Image src="~/assets/images/icons/chevron-left.png" class="center"></Image>
         <Label class="text-block" textWrap="true">
           <FormattedString>
             <Span text="Ha a műveletsor "></Span>
@@ -347,8 +347,7 @@
             <Span text="kell kezdeni a műveletsor elvégzését."></Span>
           </FormattedString>
         </Label>
-        <Image src="~/assets/images/icons/chevron-left.png" (tap)="goBack()" class="center" col="0"></Image> //kép-11
-
+        <Image src="~/assets/images/icons/chevron-left.png" class="center"></Image>
       </StackLayout>
     </ScrollView>
   </StackLayout>
@@ -362,14 +361,3 @@
     </ScrollView>
   </StackLayout>
 </TabView>
-
-<ScrollView>
-  <StackLayout class="page-wrapper">
-    <StackLayout class="pt-10">
-      <Label class="h2" [text]="tema.title" textWrap="true"></Label>
-      <StackLayout>
-
-      </StackLayout>
-    </StackLayout>
-  </StackLayout>
-</ScrollView>
