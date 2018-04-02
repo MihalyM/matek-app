@@ -8,13 +8,486 @@
   </StackLayout>
 </ActionBar>
 
-<ScrollView>
-  <StackLayout class="page-wrapper">
-    <StackLayout class="pt-10">
-      <Label class="h2" [text]="tema.title" textWrap="true"></Label>
-      <StackLayout>
+<TabView selectedIndex="0">
+  <StackLayout textWrap="true" *tabItem="{title: 'A racionális számok alakjai'}">
+    <Label textWrap="true" text="A racionális számok alakjai" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="A racionális számok fogalma" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A racionális számok " class="bold"></Span>
+            <Span text="azok a számok, melyek felírhatók két egész szám hányadosaként úgy, hogy a nevező nem 0. A racionális számok halmazának végtelen sok eleme van és a halmazt duppla szárú 'Q'–val jelöljük."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Venn-diagrammal szemléltethetjük a természetes számok halmazának, az egész számok halmazának és a racionális számok halmazának kapcsolatát. A természetes számok halmaza valódi részhalmaza az egész számok halmazának. Az egész számok halmaza valódi részhalmaza a racionális számok halmazának. A természetes számok halmaza valódi részhalmaza a racionális számok halmazának."></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep1.png"></Image>
+        <Label textWrap="true" text="Közönséges törtek" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Két egész szám hányadosát "></Span>
+            <Span text="racionális számnak " class="bold"></Span>
+            <Span text="nevezzük."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A racionális számok felírhatók tehát két egész szám hányadosaként, vagyis "></Span>
+            <Span text="közönségestört-alakban." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" width="130" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep2.png"></Image>
+        <Label class="p-10" text="A közönséges tört áll egy számlálóból, egy törtvonalból és egy nevezőből." textWrap="true"></Label>
+        <Label textWrap="true" text="A közönséges tört áll egy számlálóból, egy törtvonalból és egy nevezőből."></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="számláló " class="bold"></Span>
+            <Span text="a törtkifejezésben a törtvonal feletti rész, és azt mutatja meg, hogy a résznek hányszorosa a tört."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="törtvonal " class="bold"></Span>
+            <Span text="a törtkifejezésben használt matematikai jel a számláló és a nevező között, amely valójában osztást jelent."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="nevező " class="bold"></Span>
+            <Span text="a törtkifejezésben a törtvonal alatti rész, és azt mutatja meg, hogy hány egyenlő részre osztottuk az egészet."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" class="pt-10" text="A racionális számok lehetnek pozitívak, negatívak vagy 0."></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A 0 akkor és csak akkor, ha a számláló 0 és a nevező nem 0 –"></Span>
+            <Span text="a nevező " class="bold"></Span>
+            <Span text="ugyanis "></Span>
+            <Span text="nem lehet 0," class="bold"></Span>
+            <Span text=" hiszen ez egy osztás, és a 0-val való osztást nem értelmezzük."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Tizedes törtek" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ha elvégezzük a közönségestört-alakban megadott osztást, megkapjuk a racionális szám "></Span>
+            <Span text="tizedestört-alakját." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" width="150" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep3.png"></Image>
+        <Label textWrap="true" text="A racionális számok tizedestört-alakja véges vagy végtelen szakaszos tizedestört."></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Véges tizedestörtről " class="bold"></Span>
+            <Span text="beszélünk, ha az osztás során végül 0 lesz a maradék."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Végtelen szakaszos tizedestört " class="bold"></Span>
+            <Span text="esetén egy ponton túl a számsorozat periodikusan ismétlődik, amit a periódus első és utolsó száma feletti ponttal jelölünk. Ha csak egy szám ismétlődik, akkor egy pont kerül az ismétlődő szám fölé."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Vegyes törtek" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ha egy pozitív tört "></Span>
+            <Span text="1" class="bold"></Span>
+            <Span text="-nél nagyobb, tehát a számlálója nagyobb, mint a nevezője, akkor a törtet át lehet írni "></Span>
+            <Span text="vegyestört-alakba. " class="bold"></Span>
+            <Span text="A vegyes tört egy egész számból és egy "></Span>
+            <Span text="0" class="bold"></Span>
+            <Span text="-nál nagyobb, de "></Span>
+            <Span text="1" class="bold"></Span>
+            <Span text="-nél kisebb közönséges törtből áll. "></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" width="200" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep4.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+
+  <StackLayout textWrap="true" *tabItem="{title: 'Törtek egyszerűsítése, bővítése'}">
+    <Label textWrap="true" text="Törtek egyszerűsítése, bővítése" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="Törtekkel dolgozva gyakran válik szükségessé a törtek egyszerűsítése és bővítése."></Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Label textWrap="true" class="pl-10" text="→amikor a törteket közös nevezőre kell hozni, mert össze kell hasonlítani azok értékét,"></Label>
+        <Label textWrap="true" class="pl-10" text="→vagy mert a törteket össze kell adni vagy ki kell vonni egymásból."></Label>
+        <Label textWrap="true" text="A törtekkel való műveletek elvégzése során törekszünk továbbá arra, hogy minél kisebb számok álljanak a tört nevezőjében és számlálójában, ezért ha van rá lehetőség, már a feladat megoldása közben végezz egyszerűsítéseket."></Label>
+        <Label textWrap="true" text="Ha egy műveletsor vagy feladat megoldását törtalakban adod meg, ügyelj arra, hogy a tört a lehető legegyszerűbb formában álljon!"></Label>
+        <Image class="center mtb-20" width="220" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep5.png"></Image>
+        <Label textWrap="true" text="Törtek egyszerűsítése és bővítése" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" text="Közös nevezőre kell hozni a törteket, ha szeretnénk azok értékét összehasonlítani, vagy szeretnénk azokkal összeadást vagy kivonást végezni. A közös nevező meghatározásához a törteket egyszerűsíteni vagy bővíteni kell. Egyszerűsítéskor és bővítéskor a tört értéke változatlan marad."></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Egyszerűsítéskor " class="bold"></Span>
+            <Span text="egy tört számlálóját is, és nevezőjét is ugyanazzal a nem 0 egész számmal "></Span>
+            <Span text="osztjuk." class="bold"></Span>
+            <Span text="Ilyenkor a számláló és a nevező "></Span>
+            <Span text="abszolút értéke kisebb " class="bold"></Span>
+            <Span text="lesz, de a "></Span>
+            <Span text="tört értéke változatlan " class="bold"></Span>
+            <Span text="marad."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" width="50" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep6.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Bővítéskor " class="bold"></Span>
+            <Span text="egy tört számlálóját is, és nevezőjét is ugyanazzal a nem 0 egész számmal "></Span>
+            <Span text="szorozzuk. " class="bold"></Span>
+            <Span text="Ilyenkor a számláló és a nevező "></Span>
+            <Span text="abszolút értéke nagyobb " class="bold"></Span>
+            <Span text="lesz, de a "></Span>
+            <Span text="tört értéke változatlan " class="bold"></Span>
+            <Span text="marad."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" width="50" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep7.png"></Image>
+        <Label textWrap="true" text="Képzeld el, hogy az egységet további kisebb egységekre osztjuk: ahhoz, hogy a tört értéke ne változzon, az új kis egységből többet kell venni."></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep8.png"></Image>
+        <Label textWrap="true" text="Az eljárás bármeddig folytatható, hiszen mindig tudjuk tovább osztani a területet, ahogy mindig tudjuk tovább bővíteni a törtet is."></Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+
+  <StackLayout textWrap="true" *tabItem="{title: 'Racionális számok összeadása és kivonása'}">
+    <Label textWrap="true" text="Racionális számok összeadása és kivonása" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="A racionális számok megkerülhetetlenül jelen vannak az életedben. Sokszor kell összeadást vagy kivonást végezned velük, például ha a napi étrended tápértékét szeretnéd meghatározni. Csak akkor kapsz jó eredményt, ha ismered a racionális számok összeadásának, kivonásának szabályait."></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep9.png"></Image>
+        <Label textWrap="true" text="Racionális számok összeadása, kivonása" class="pt-10 h2 center"></Label>
+        <Label>
+          <FormattedString>
+            <Span text="Közönséges törteket " class="bold"></Span>
+            <Span textWrap="true" text="úgy adunk össze, hogy közös nevezőre hozzuk a törteket, ami az összegtört nevezője lesz, majd a számlálókat összeadjuk."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image class="center mtb-20" width="200" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep10.png"></Image>
+        <Label textWrap="true" text="Kivonás esetén szintén közös nevezőre hozzuk a törteket, ami a különbségtört nevezője lesz, majd a kisebbítendő számlálójából kivonjuk a kivonandó számlálóját."></Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image class="center mtb-20" width="200" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep11.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Tizedestörteket " class="bold"></Span>
+            <Span text="úgy adunk össze, hogy a legkisebb helyi értéktől indulva a helyi értékeknek megfelelően összeadjuk a számokat, nem feledve a tizedesvesszőt kitenni."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image class="center mtb-20" width="200" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep12.png"></Image>
+        <Label textWrap="true" text="Kivonásnál hasonlóan járunk el, mint az egész számok kivonása esetén, figyelmet fordítva a tizedesvessző kihelyezésére."></Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image class="center mtb-20" width="200" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep13.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Vegyes törteket " class="bold"></Span>
+            <Span text="úgy adunk össze, hogy összeadjuk az egészrészeket, majd összeadjuk a törtrészeket is a közönséges törtek összeadásának megfelelően. Ha az összeadás után a vegyes tört közönségestört-része nagyobb, mint "></Span>
+            <Span text="1, " class="bold"></Span>
+            <Span text="akkor az "></Span>
+            <Span text="1 " class="bold"></Span>
+            <Span text="fölötti egészrészeket hozzáadhatjuk a vegyes tört egészrészéhez."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep14.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A vegyes törtek összeadásának egy "></Span>
+            <Span text="másik módszere, " class="bold"></Span>
+            <Span text="hogy a vegyes törteket átalakítjuk közönséges törtté, a közönséges törtek összeadásának megfelelően összeadjuk a törteket, végül, ha lehetséges, az eredményt visszaalakítjuk vegyes törtté."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep15.png"></Image>
+        <Label textWrap="true" text="Kivonás esetén a vegyes törtet célszerű átalakítani közönségestört-alakba, a közönséges törtek kivonásának megfelelően elvégezni a kivonást, majd, ha lehetséges, a különbséget visszaalakítani vegyes törtté."></Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep16.png"></Image>
+        <Label textWrap="true" text="Ha közönséges törteket, tizedestörteket és vegyes törteket szeretnénk vegyesen összeadni, illetve kivonni, akkor minden törtet érdemes közönséges törtté alakítani, majd a közönséges törtek összeadásának, illetve kivonásának megfelelően összeadni, illetve kivonni őket."></Label>
+        <Label textWrap="true" text="Például:"></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep17.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Racionális számok szorzása és osztása'}">
+    <Label textWrap="true" text="Racionális számok szorzása és osztása" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="Mint arról már szóltunk, és nyilván te is tapasztaltad már, a mindennapokban körülvesznek minket a racionális számok, amelyekkel sokszor szorzást vagy osztást kell végezni, például ha a pénzváltónál eurót szeretnél vásárolni egy adott értékben. Ilyenkor jól jön, ha ismered a racionális számok szorzásának és osztásának módját."></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep18.png"></Image>
+        <Label textWrap="true" text="Racionális számok szorzása, osztása" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Közönséges törtet egész számmal " class="bold"></Span>
+            <Span text="úgy "></Span>
+            <Span text="szorzunk, " class="bold"></Span>
+            <Span text=" hogy vagy a számlálót szorozzuk, vagy a nevezőt osztjuk az egész számmal. Gyakori hiba, hogy a számlálót is, és a nevezőt is szorozzák, ebben az esetben viszont a tört értéke nem változik (hiszen ez a bővítésnek a módja)."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep19.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Közönséges törtet közönséges törttel " class="bold"></Span>
+            <Span text="úgy "></Span>
+            <Span text="szorzunk, " class="bold"></Span>
+            <Span text="hogy a számlálókat is, és a nevezőket is összeszorozzuk."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep20.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Közönséges törtet egész számmal " class="bold"></Span>
+            <Span text="úgy "></Span>
+            <Span text="osztunk, " class="bold"></Span>
+            <Span text="hogy vagy a számlálót osztjuk, vagy a nevezőt szorozzuk az egész számmal."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep21.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Közönséges törtet közönséges törttel " class="bold"></Span>
+            <Span text="úgy "></Span>
+            <Span text="osztunk, " class="bold"></Span>
+            <Span text="hogy az osztó reciprokával szorozzuk az osztandót."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep22.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="tizedestörtek " class="bold"></Span>
+            <Span text="szorzását vagy osztását az egész számok szorzásához vagy osztásához hasonlóan végezzük, de nagyon kell figyelni a pontos helyi értékekre és a tizedesvessző kitételére."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Vegyes tört " class="bold"></Span>
+            <Span text="szorzásához vagy osztásához a törtet átalakítjuk közönségestört-alakba, és a közönséges tört szorzási és osztási szabályainak megfelelően elvégezzük a szorzást vagy az osztást."></Span>
+          </FormattedString>
+        </Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Műveletek sorrendje'}">
+    <Label textWrap="true" text="Műveletek sorrendje" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="Egy műveletsort látva fontos tudni, hogyan kezdj neki a megoldásának, vagyis milyen sorrendben végezd el a benne szereplő műveleteket. Ha ugyanis erre nem figyelsz oda, nem a helyes eredményt kapod meg. Számológépet használva is fontos ennek külön figyelmet szentelni, hiszen nem mindegy, hogy milyen sorrendben írod be a kiszámítandó műveleteket, illetve a számokat."></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep23.png"></Image>
+        <Label textWrap="true" text="Műveletek sorrendje a racionális számkörben" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" text="A műveletek sorrendje racionális számkörben ugyanúgy működik, mint egész számkörben vagy természetes számkörben."></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ha a műveletsor csak "></Span>
+            <Span text="összeadást és kivonást " class="bold"></Span>
+            <Span text="tartalmaz, akkor "></Span>
+            <Span text="balról jobbra " class="bold"></Span>
+            <Span text="kell haladni, mint ahogyan akkor is, ha a műveletsorban csak "></Span>
+            <Span text="szorzás és osztás " class="bold"></Span>
+            <Span text="található."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep24.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ha a műveletsor tartalmaz "></Span>
+            <Span text="összeadást vagy kivonást, " class="bold"></Span>
+            <Span text="valamint "></Span>
+            <Span text="szorzást vagy osztást, " class="bold"></Span>
+            <Span text="esetleg mind a négy alapművelet szerepel benne vegyesen, "></Span>
+            <Span text="először " class="bold"></Span>
+            <Span text="mindig a "></Span>
+            <Span text="szorzást és osztást " class="bold"></Span>
+            <Span text="kell elvégezni "></Span>
+            <Span text="balról jobbra " class="bold"></Span>
+            <Span text="haladva, "></Span>
+            <Span text="majd az összeadást és kivonást " class="bold"></Span>
+            <Span text="ugyancsak "></Span>
+            <Span text="balról jobbra " class="bold"></Span>
+            <Span text="haladva."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep25.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ha a műveletsor "></Span>
+            <Span text="zárójelet " class="bold"></Span>
+            <Span text="is tartalmaz, először ennek a felbontására kell sort keríteni. Vagy a zárójelen belüli műveleteket végzed el először, és utána foglalkozol a zárójel előtti és utáni résszel, vagy rögtön felbontod a zárójelet, ügyelve arra, hogy mi áll a zárójel előtt, és mi utána."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep26.png"></Image>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Ugyanis, ha például a zárójel meg van szorozva balról vagy jobbról egy természetes számmal, akkor a zárójelen belül minden tagot meg kell szorozni ezzel a természetes számmal. Ha a zárójel másik zárójelet vagy zárójeleket tartalmaz, akkor a "></Span>
+            <Span text="legbelső zárójel " class="bold"></Span>
+            <Span text="felbontásával kezdjük a műveletsor elvégzését hasonlóan az előzőekhez."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Nem mindegy a sorrend!" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" text="Hogy is van ez?"></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep27.png"></Image>
+        <Label textWrap="true" text="Nem mindegy, hogy melyik művelettel kezdjük a műveletsor megoldását. Egyenrangú műveletek esetén, ha nincs zárójel, akkor balról jobbra haladunk."></Label>
+        <Image class="center mtb-20" width="220" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep28.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+
+  <StackLayout *tabItem="{title: 'Törtrész számítása'}">
+    <Label textWrap="true" text="Törtrész számítása" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="törttel való szorzás " class="bold"></Span>
+            <Span text="valójában az adott törtrész kiszámítását jelenti. A "></Span>
+            <Span text="nevező " class="bold"></Span>
+            <Span text="határozza meg, hogy "></Span>
+            <Span text="mennyi egyenlő részre " class="bold"></Span>
+            <Span text="osztjuk a szorzandót, a "></Span>
+            <Span text="számláló " class="bold"></Span>
+            <Span text="pedig azt mutatja meg, hogy "></Span>
+            <Span text="mennyi részt " class="bold"></Span>
+            <Span text="veszünk belőle. Törteknek is lehet további törtrészét venni: ebben az esetben törteket kell egymással szorozni. "></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep29.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Százalékrész számítása'}">
+    <Label textWrap="true" text="Százalékrész számítása" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="A százalékszámítás a törtrész kiszámításának egy speciális esete, ugyanis egy mennyiségnek vagy egy számnak az egy századrészét egy százaléknak nevezzük."></Label>
+        <Label textWrap="true" text="A mindennapi életben számos alkalommal találkozunk mennyiségek vagy számok százalékos arányával."></Label>
+        <Label text="Például:"></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep30.png"></Image>
+        <Label textWrap="true" text="Százalékrész számítása" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" text="A százalékszámítás alapfogalmai:"></Label>
+        <Label class="text-block pl-10" textWrap="true">
+          <FormattedString>
+            <Span text="-"></Span>
+            <Span text="százalékalap: " class="red"></Span>
+            <Span text="az egészrész,"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block pl-10" textWrap="true">
+          <FormattedString>
+            <Span text="-"></Span>
+            <Span text="százalékérték: " class="yellow"></Span>
+            <Span text="a törtrész,"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block pl-10" textWrap="true">
+          <FormattedString>
+            <Span text="-"></Span>
+            <Span text="százalékláb: " class="blue"></Span>
+            <Span text="a századokban kifejezett tört."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Kiszámítás:"></Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep31.png"></Image>
+        <Label textWrap="true" text="Például:"></Label>
+        <Label class="text-block pl-10" textWrap="true">
+          <FormattedString>
+            <Span text="1" class="red"></Span>
+            <Span text="-nek a "></Span>
+            <Span text="20%" class="blue"></Span>
+            <Span text="-a "></Span>
+            <Span text="0,2" class="yellow"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block pl-10" textWrap="true">
+          <FormattedString>
+            <Span text="A százalékalap, vagyis az egészrész:"></Span>
+            <Span text=" 1." class="red"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block pl-10" textWrap="true">
+          <FormattedString>
+            <Span text="A százalékérték, vagyis a törtrész: "></Span>
+            <Span text="0,2." class="yellow"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text-block pl-10" textWrap="true">
+          <FormattedString>
+            <Span text="A százalékláb, azaz a századokban kifejezett tört: "></Span>
+            <Span text="20%." class="blue"></Span>
+          </FormattedString>
+        </Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Abszolút érték'}">
+    <Label textWrap="true" text="Abszolút érték" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="Az abszolút érték jól értelmezhető a távolság segítségével. Íme a gyakorlati hasznára egy példa:"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Az M3-as autópályán Budapestről Hatvan "></Span>
+            <Span text="60 km" class="bold"></Span>
+            <Span text="-re van, és ugyanazon az úton távolabb, "></Span>
+            <Span text="180 km" class="bold"></Span>
+            <Span text="-re fekszik Polgár. A kérdés az, hogy milyen messze van egymástól Hatvan és Polgár?"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep32.png"></Image>
+        <Label textWrap="true" text="A megoldáshoz ki kell számítani a két adott távolság különbségét. Az abszolút érték miatt gyakorlatilag mindegy, hogy melyik távolságból vonjuk ki a másikat, egy különbség abszolút értéke ugyanis független a különbség tagjainak sorrendjétől. Egy számnak és az ellentettjének az abszolút értéke egyenlő."></Label>
+        <Label textWrap="true" text="Az abszolút érték" class="pt-10 h2 center"></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Egy szám 0-tól való távolságát a számegyenesen a szám "></Span>
+            <Span text="abszolút értékének " class="bold"></Span>
+            <Span text="nevezzük. Mivel távolságról van szó, az abszolút érték nem lehet negatív."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrpa="true" text="Pozitív számnak az abszolút értéke maga a szám, 0-nak az abszolút értéke 0, negatív számnak az abszolút értéke pedig a szám ellentettje (-1-szerese)."></Label>
+        <Label textWrpa="true" text="Egy számnak és az ellentettjének az abszolút értéke egyenlő."></Label>
+        <Label class="text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Egy szám abszolút értékét úgy jelöljük, hogy a számot "></Span>
+            <Span text="két függőleges vonal " class="bold"></Span>
+            <Span text="közé tesszük: |a| "></Span>
+          </FormattedString>
+        </Label>
+        <Image class="center mtb-20" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/muveletek-racionalis-szamokkal-kep33.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+
+  <StackLayout *tabItem="{title: 'Behelyettesítés'}">
+    <Label textWrap="true" text="Behelyettesítés" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="A behelyettesítés a matematikán belül több témakörben is használatos, például az egyenletek megoldásának ellenőrzésekor, egy függvény ábrázolásánál vagy egy terület kiszámításánál. Ugyanakkor más tudományterületeken is nagyon gyakran használjuk, például amikor a fizikában, kémiában vagy biológiában egy képletbe vagy összefüggésbe beírjuk az adott értékeket, majd kiszámoljuk az eredményt."></Label>
 
       </StackLayout>
-    </StackLayout>
+    </ScrollView>
   </StackLayout>
-</ScrollView>
+
+
+  <StackLayout *tabItem="{title: 'Feladatok'}">
+    <Label textWrap="true" text="Feladatok" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Image class="pt-10" src="~/assets/images/temakorok/szamolasi-keszseg/muveletek-racionalis-szamokkal/hamarosan.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</TabView>

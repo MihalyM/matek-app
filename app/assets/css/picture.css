@@ -9,3 +9,7 @@
   height: 200;
   width: 200;
 }
+
+Image {
+  padding: 20 0 !important;
+}
