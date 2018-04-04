@@ -65,6 +65,14 @@
   margin: 10 0;
 }
 
+.super {
+  vertical-align: super; 
+} 
+
+.sub {
+  vertical-align: sub; 
+}
+
 .definition {
   background: #f8c818;
   border-left-width: 6;
