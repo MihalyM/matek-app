@@ -8,13 +8,513 @@
   </StackLayout>
 </ActionBar>
 
-<ScrollView>
-  <StackLayout class="page-wrapper">
-    <StackLayout class="pt-10">
-      <Label class="h2" [text]="tema.title" textWrap="true"></Label>
-      <StackLayout>
-
+<TabView selectedIndex="0">
+  <StackLayout *tabItem="{title: 'Bevezetés'}" textWrap="true">
+    <Label text="Bevezetés" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Egy alakzat "></Span>
+            <Span text="kerület" class="bold"></Span>
+            <Span text="ének meghatározásával a mindennapi életben is találkozhatunk."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Ha egy családi ház telkének kell megépíteni a kerítését, akkor a telek kerülete éppen a kerítés hossza lesz."
+              class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="300" src="~/assets/images/temakorok/kerulet/kerulet-kep1.png"></Image>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="A karácsonyra egy ajándékcsomagot szeretnénk szalaggal feldíszíteni, akkor a szalag hosszának meghatározásához is a testet alkotó síkidomok határoló vonalainak hosszával kell számolnunk."
+              class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep2.png"></Image>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="A kerék megcsúszását gátló fékrendszernél is szempont a kerék kerülete, ugyanis egy gördülő kerék éppen annyi utat tesz meg egy fordulat alatt, mint kerék keresztmetszetének a kerülete. "
+              class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="300" src="~/assets/images/temakorok/kerulet/kerulet-kep3.png"></Image>
       </StackLayout>
-    </StackLayout>
+    </ScrollView>
   </StackLayout>
-</ScrollView>
+
+  <StackLayout *tabItem="{title: 'A kerület'}" textWrap="true">
+    <Label textWrap="true" text="A kerület fogalma" class="pt-10 h2 center"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label class="definition text-block" textWrap="true">
+          <FormattedString>
+            <Span text="Egy alakzatot határoló vonalak együttes hosszát kerületnek nevezzük."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Sokszögek esetén a "></Span>
+            <Span text="kerület " class="bold"></Span>
+            <Span text="a sokszög oldalhosszainak összege. Kör vagy bonyolultabb alakzatok esetén nehezebb dolgunk van, például közelítő módszereket alkalmazhatunk.">
+            </Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="A kerület jele: "></Span>
+            <Span text="K." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="A kerület mértékegysége megegyezik a hosszúság mértékegységeivel (milliméter, centiméter, deciméter, méter, kilométer, könyök, coll stb.). Mivel a kerület az alakzatot határoló vonalak hosszúságaiból tevődik össze, ezért pozitív szám."></Label>
+        <Label textWrap="true" text="Síkidom kerületének a meghatározása" class="pt-10 h2 center"></Label>
+        <Label textWrap="true" text="Egy síkidom kerületét többféle módszerrel is meghatározhatjuk. Mutatunk három eljárást, melyek közelítő eredményt adnak, nem pontosak, de szemléletesek:"></Label>
+        <Label class="pl-20" textWrap="true" text="  ٠ Egy madzagot vezetünk végig a síkidomot határoló vonalakon. A madzag hossza megegyezik a síkidom kerületével."></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep4.png"></Image>
+        <Label class="pl-20" textWrap="true" text="  ٠ Sokszög esetén körberakhatjuk egységnyi oldalú négyzetekkel a sokszöget (a négyzetek részlegesen fedésbe is kerülhetnek). A körberakáshoz szükséges négyzetek száma adja a sokszög kerületét."></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep5.png"></Image>
+        <Label class="pl-20" textWrap="true" text="  ٠ Konvex síkidom esetén az oldalakat megszínezve, majd végiggörgetve egy más színű lapon, a lenyomat hossza megegyezik a síkidom kerületével. Mivel egy síkidomnak nincs vastagsága, ezt csak képzeletben tudjuk megtenni, illetve abban az esetben, ha síkidomunk egy térbeli test egyik lapja. Ekkor az oldalak vastagsága tulajdonképpen a test magassága lesz."></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep6.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Háromszögek kerülete'}" textWrap="true">
+    <Label text="Háromszögek kerületének meghatározása" class="pt-10 h2 center" textWrap="true"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="háromszög kerülete " class="bold"></Span>
+            <Span text="a háromszöget határoló oldalak hosszának összegével egyezik meg."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="A háromszög oldalai kapcsán eszünkbe juthat a háromszögek oldalak szerinti csoportosítása (általános, egyenlőszárú, szabályos háromszögek)."></Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Egyenlőszárú háromszögek és szabályos háromszögek esetében az "></Span>
+            <Span text="a, b, c " class="keplet"></Span>
+            <Span text="oldalak között vannak egyenlő hosszúságúak, és a háromszögek kerületének meghatározásakor az azonos kifejezéseket összevonhatjuk."></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Általános" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep7.png"></Image>
+          <Label textWrap="true" text="K = a + b + c" class="bold center keplet "></Label>
+        </StackLayout>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Egyenlőszárú" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep8.png"></Image>
+          <Label textWrap="true" text="K = a + b + b = a + 2b" class="bold center keplet "></Label>
+        </StackLayout>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Szabályos" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep9.png"></Image>
+          <Label textWrap="true" text="K = a + a + a = 3a" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label textWrap="true" text="A háromszög oldalairól szól az úgynevezett háromszög-egyenlőtlenség: minden háromszögre igaz, hogy a háromszög bármely két oldalának összege nagyobb a harmadik oldalánál."></Label>
+        <Label textWrap="true" text="A háromszögeket nem csak oldalaik, hanem szögeik alapján is csoportosíthatjuk (hegyesszögű, derékszögű, tompaszögű háromszögek). Ezekben az esetekben is az oldalak összegével egyezik meg a kerület. "></Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Hegyesszögű" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep10.png"></Image>
+          <Label textWrap="true" text="K = a + b + c" class="bold center keplet "></Label>
+        </StackLayout>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Derékszögű" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep11.png"></Image>
+          <Label textWrap="true" text="K = a + b + c" class="bold center keplet "></Label>
+        </StackLayout>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Tompaszögű" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep12.png"></Image>
+          <Label textWrap="true" text="K = a + b + c" class="bold center keplet "></Label>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Négyszögek kerülete'}" textWrap="true">
+    <Label text="Négyszögek kerületének meghatározása" class="pt-10 h2 center" textWrap="true"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="Bármely négyszög kerülete a négyszöget határoló oldalak hosszának összegével egyezik meg."></Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Ha egy "></Span>
+            <Span text="négyszög " class="bold"></Span>
+            <Span text="oldalai "></Span>
+            <Span text="a, b, c, d," class="keplet"></Span>
+            <Span text="akkor a "></Span>
+            <Span text="kerülete: " class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Általános négyszög" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep13.png"></Image>
+          <Label textWrap="true" text="K = a + b + c + d" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label class="mtb-10" textWrap="true" text="Ha egy négyszögnek vannak azonos hosszúságú oldalai, akkor a kerület meghatározásakor összevonhatjuk az azonos kifejezéseket, ezáltal rövidebb képlethez jutunk, de ettől függetlenül a négyszög kerületét bármely esetben kiszámíthatjuk az oldalhosszúságok összeadásával."></Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Ha egy "></Span>
+            <Span text="trapéz " class="bold"></Span>
+            <Span text="oldalai "></Span>
+            <Span text="a, b, c, d," class="keplet"></Span>
+            <Span text="akkor a "></Span>
+            <Span text="kerülete: " class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Trapéz" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep14.png"></Image>
+          <Label textWrap="true" text="K = a + b + c + d" class="bold center keplet "></Label>
+        </StackLayout>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Húrtrapéz" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep15.png"></Image>
+          <Label textWrap="true" text="K = a + 2b + c" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Egy "></Span>
+            <Span text="paralelogrammának " class="bold"></Span>
+            <Span text="a két-két szemközti oldala azonos hosszúságú, ezért a "></Span>
+            <Span text="kerülete: " class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Paralelogramma" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep16.png"></Image>
+          <Label textWrap="true" text="K = 2a + 2b = 2(a + b)" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Ha például a paralelogramma rombusz, akkor kerületét még egyszerűbben fel tudjuk írni. Egy "></Span>
+            <Span text="rombusznak " class="bold"></Span>
+            <Span text="ugyanis mind a négy oldala azonos hosszúságú, ezért egy rombusz "></Span>
+            <Span text="kerülete: " class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Rombusz" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep17.png"></Image>
+          <Label textWrap="true" text="K = 4a" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="négyzetnek " class="bold"></Span>
+            <Span text="s minden oldalhosszúsága megegyezik, tudjuk, hogy a négyzet is rombusz, ezért "></Span>
+            <Span text="kerülete: " class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Négyzet" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep18.png"></Image>
+          <Label textWrap="true" text="K = 4a" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Egy "></Span>
+            <Span text="téglalapnak, " class="bold"></Span>
+            <Span text="melynek szomszédos oldalai eltérő hosszúságúak, például "></Span>
+            <Span text="a " class="keplet"></Span>
+            <Span text="és "></Span>
+            <Span text="b, " class="keplet"></Span>
+            <Span text="mivel tudjuk, hogy a téglalap is paralelogramma, a "></Span>
+            <Span text="kerülete: " class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Téglalap" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep19.png"></Image>
+          <Label textWrap="true" text="K = 2a + 2b = 2(a + b)" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Minden "></Span>
+            <Span text="deltoid, " class="bold"></Span>
+            <Span text="akár konkáv, akár konvex két-két szomszédos oldala azonos hosszúságú, ezért "></Span>
+            <Span text="kerülete: " class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="Deltoid" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep20.png"></Image>
+          <Label textWrap="true" text="K = 2a + 2b = 2(a + b)" class="bold center keplet "></Label>
+        </StackLayout>
+      </StackLayout>
+
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Sokszögek kerülete'}" textWrap="true">
+    <Label text="Sokszögek kerületének meghatározása" class="pt-10 h2 center" textWrap="true"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Egy"></Span>
+            <Span text="sokszög kerülete " class="bold"></Span>
+            <Span text="az oldalai hosszának összege."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Bármely sokszög kerületének meghatározásához tehát össze kell adni minden oldal hosszának mérőszámát akár konkáv, akár konvex sokszögről legyen is szó."></Label>
+        <StackLayout class="megoldas">
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep21.png"></Image>
+          <Label textWrap="true" text="K = a + b + c + d + e + f + g" class="bold center keplet "></Label>
+        </StackLayout>
+        <StackLayout class="megoldas">
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep22.png"></Image>
+          <Label textWrap="true" text="K = a + b + c + d + e + f + g + h + i + j" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Egy"></Span>
+            <Span text=" szabályos sokszög " class="bold"></Span>
+            <Span text="esetén viszont a kerület meghatározásához nem feltétlenül kell sorban, minden oldal hosszát összeadni (bár ez is jó megoldás), hanem kihasználva azt, hogy minden oldal azonos hosszúságú, elég egy oldal hosszúságát megszorozni az oldalak számával."></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep23.png"></Image>
+          <Label textWrap="true" text="K = a + a + a + a + a + a = 6a" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label textWrap="true" text="Látni fogjuk, hogy a szabályos sokszögek kerülete nagyon fontos a kör kerületének meghatározásában."></Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Kör kerülete'}" textWrap="true">
+    <Label text="A kör kerületének meghatározása" class="pt-10 h2 center" textWrap="true"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Egy"></Span>
+            <Span text="kör" class="bold"></Span>
+            <Span text="nek nincsenek határoló oldalai, amik hosszát össze lehetne adni a kör "></Span>
+            <Span text="kerület" class="bold"></Span>
+            <Span text="ének megadásához, azonban már az ókorban is világszerte voltak ötletek, próbálkozások, módszerek egy adott kör kerületének minél pontosabb meghatározására."></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="1. közelítő módszer: A körbe is és a kör köré azonos oldalszámú szabályos sokszögeket írunk, vizsgáljuk ezek kerületét. Ekkor minél több oldalú egy-egy ilyen sokszögpár, annál inkább közelít a két sokszög kerülete a kör kerületéhez."></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep24.png"></Image>
+        <Label textWrap="true" text="2. közelítő módszer: Egy madzagot vezetünk végig a kör határvonalán. A madzag hossza megegyezik a kör kerületével."></Label>
+        <Label textWrap="true" text="Egy adott kör kerületének az adott kört határoló vonal hosszát nevezzük."></Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="A matematikusok felismerték, hogy bármely kör "></Span>
+            <Span text="K " class="keplet"></Span>
+            <Span text="kerületének és "></Span>
+            <Span text="d " class="keplet"></Span>
+            <Span text="átmérőjének aránya állandó. Ezt az állandót „pínek” nevezzük és egy görög betűvel, a "></Span>
+            <Span text="π" class="keplet"></Span>
+            <Span text="-vel jelöljük. A "></Span>
+            <Span text="π" class="keplet"></Span>
+            <Span text="-t Ludolph-féle számnak is szokták emlegetni."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep25.png"></Image>
+        <Label textWrap="true" text="A kör kerületének kiszámítási módja:"></Label>
+        <Label class="keplet center" textWrap="ture" text="K = dπ = 2rπ"></Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="π" class="bold keplet"></Span>
+            <Span text="irracionális szám, azaz végtelen nem szakaszos tizedes tört: "></Span>
+            <Span text="π = 3,14159226535..." class="bold keplet"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Az általános iskolai feladatokban általában a "></Span>
+            <Span text="π" class="bold keplet"></Span>
+            <Span text="-nek a "></Span>
+            <Span text="3,14" class="bold keplet"></Span>
+            <Span text="-re kerekített értékével számolunk."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep26.png"></Image>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'A Pitagorasz-tétel'}" textWrap="true">
+    <Label text="A Pitagorasz-tétel" class="pt-10 h2 center" textWrap="true"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="A Pitagorasz-tétel a geometria egyik legismertebb tétele. A tétel kimondását és bizonyítását sokáig Pitagorasznak, egy ókori görög matematikusnak tulajdonították, de ma már tudjuk, hogy még korábban, a görögök és más népek is ismerték, bizonyították."></Label>
+        <Label class="definition text-block" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="Pitagorsz-tétel: " class="bold"></Span>
+            <Span text="Bármely derékszögű háromszög befogóinak négyzetösszege megegyezik az átfogó négyzetével. "></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep27.png"></Image>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep28.png"></Image>
+        <Label textWrap="true" text="Ebből következik, hogy ha egy háromszög derékszögű, akkor a befogókra emelt négyzetek területösszege megegyezik az átfogóra emelt négyzet területével."></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep29.png"></Image>
+        <Label textWrap="true" text="A Pitagorasz-tétel bizonyítása: " class="bold"></Label>
+        <Label textWrap="true" text="A Pitagorasz-tételnek több bizonyítása létezik. Ezek közül egy szemléletes bizonyítást ismertetünk."></Label>
+        <Label class="text center" textWrap="true">
+          <FormattedString>
+            <Span text="Vegyünk két egybevágó négyzetet, melyek oldalai "></Span>
+            <Span text="(a + b)" class="bold keplet"></Span>
+            <Span text="hosszúságúak."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep30.png"></Image>
+        <Label class="text center" textWrap="true">
+          <FormattedString>
+            <Span text="Osszuk fel az első négyzetet 1 db "></Span>
+            <Span text="a" class="bold keplet"></Span>
+            <Span text="oldalhosszúságú négyzetre, 1 db "></Span>
+            <Span text="b" class="bold keplet"></Span>
+            <Span text="oldalhosszúságú négyzetre és 4 db egybevágó derékszögű háromszögre."></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep31.png"></Image>
+        <Label class="text center" textWrap="true">
+          <FormattedString>
+            <Span text="Osszuk fel a másik "></Span>
+            <Span text="(a + b)" class="bold keplet"></Span>
+            <Span text="oldalhosszúságú négyzetet is, mégpedig 4 db egybevágó derékszögű háromszögre, melyek befogói "></Span>
+            <Span text="a " class="bold keplet"></Span>
+            <Span text="és"></Span>
+            <Span text="b " class="bold keplet"></Span>
+            <Span text="osszúságúak, és egy olyan négyzetre, mely oldalai a derékszögű háromszögek átfogóinak hosszával egyezik meg, ezt jelöltük "></Span>
+            <Span text="c" class="bold keplet"></Span>
+            <Span text="-vel. (A "></Span>
+            <Span text="c" class="bold keplet"></Span>
+            <Span text="oldalhosszúságú négyszög valóban négyzet lesz, ez a szögek vizsgálatával egyszerűen belátható.)"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep32.png"></Image>
+        <Label class="text center" textWrap="true">
+          <FormattedString>
+            <Span text="Ha elvesszük mindkét nagy négyzetből a 4-4 db egybevágó háromszöget, akkor egyenlő nagyságú területekből egyenlő nagyságú területeket vettünk el, tehát a maradék részeknek is egyenlőknek kell lennie. Vagyis az "></Span>
+            <Span text="a" class="bold keplet"></Span>
+            <Span text="oldalhosszúságú négyzetnek a területe, ami"></Span>
+            <Span text="a² " class="bold keplet"></Span>
+            <Span text=", és a "></Span>
+            <Span text="b " class="bold keplet"></Span>
+            <Span text="oldalhosszúságú négyzetnek a területe, ami "></Span>
+            <Span text="b²" class="bold keplet"></Span>
+            <Span text="az együttes területe megegyezik a "></Span>
+            <Span text="c" class="bold keplet"></Span>
+            <Span text="oldalhosszúságú négyzet területével, ami "></Span>
+            <Span text="c²." class="bold keplet"></Span>
+            <Span text="Azaz "></Span>
+            <Span text="a² + b² = c²" class="bold keplet"></Span>
+          </FormattedString>
+        </Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep33.png"></Image>
+        <Label textWrap="true" text="A Pitagorasz-tétel megfordítása:" class="bold"></Label>
+        <Label textWrap="true" text="Ha egy háromszög két oldalának négyzetösszege megegyezik a harmadik oldal négyzetével, akkor a háromszög derékszögű. Vagyis ha egy háromszög két oldalára emelt négyzetek területösszege megegyezik a harmadik oldalra emelt négyzet területével, akkor a háromszög derékszögű."></Label>
+        <Label textWrap="true" text="A Pitagorasz-tétel alkalmazása a matematikában és fizikában mindennapi. Rengeteg gyakorlati feladat megoldását segíti. "></Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Azokat a pozitív egész számokból álló számhármasokat, melyekre igaz az, hogy közülük kettő négyzetösszege egyenlő a harmadik szám négyzetével, "></Span>
+            <Span text="pitagoraszi számhármasoknak " class="bold"></Span>
+            <Span text="hívjuk. "></Span>
+            <Span text="Például a 3, 4 és 5 pitagoraszi számhármas, mert"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text center" textWrap="true" text="3² + 4² = 5²"></Label>
+        <Label class="text center" textWrap="true" text="9 + 16 = 25"></Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="Ha egy háromszög oldalainak hossza "></Span>
+            <Span text="pitagoraszi számhármas, " class="bold"></Span>
+            <Span text="akkor a Pitagorasz tétel megfordításából következik, hogy a "></Span>
+            <Span text="háromszög derékszögű." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label textWrap="true" text="Néhány pitagoraszi számhármas:"></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep34.png"></Image>
+        <Label textWrap="true" text="Ha találtál egy pitagoraszi számhármast, annak a többszörösei is pitagoraszi számhármasok lesznek:"></Label>
+        <Label class="keplet center" textWrap="true" text="3² + 4² = 5²"></Label>
+        <Label class="keplet center" textWrap="true" text="6²+ 8² = 10²"></Label>
+        <Label class="keplet center" textWrap="true" text="9² + 12² = 15²"></Label>
+        <Label class="keplet center" textWrap="true" text="12² + 16² = 20²"></Label>
+        <Label class="keplet center" textWrap="true" text="..."></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep35.png"></Image>
+      </StackLayout>
+
+    </ScrollView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Szöveges feladatok'}" textWrap="true">
+    <Label text="Szöveges feladatok megoldása" class="pt-10 h2 center" textWrap="true"></Label>
+    <ScrollView>
+      <StackLayout class="tab-content">
+        <Label textWrap="true" text="A matematikával a mindennapokban általában úgy találkozunk, hogy magunk alkotjuk a feladatokat. Például telkünk méreteinek ismeretében megyünk el kerítést venni. Ezen kívül sokszor ábrák, képek alapján kell bizonyos adatokat, tulajdonságokat megvizsgálni. Ez egy irodaház építésénél például a mérnököknek elengedhetetlen. Pontos, precíz ábrákra és számolásokra van szükség, hogy a ház stabilan álljon."></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep36.png"></Image>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep37.png"></Image>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="A "></Span>
+            <Span text="szöveges feladatok " class="bold"></Span>
+            <Span text="ehát a való életbeli problémákra készítenek fel minket."></Span>
+          </FormattedString>
+        </Label>
+        <Label text="Szöveges feladatok megoldása" class="pt-10 h2 center" textWrap="true"></Label>
+        <Label textWrap="true" text="Szöveges feladat megoldásának lépései:"></Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="1. El kell "></Span>
+            <Span text="olvasni, " class="bold"></Span>
+            <Span text="hogy miről szól a feladat"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="2. Érdemes újra elolvasni, de most már azzal a céllal, hogy az "></Span>
+            <Span text="érdemi információkra " class="bold"></Span>
+            <Span text="figyeljünk oda, és azokat gyűjtsük ki a szövegből"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="3. Érdemes "></Span>
+            <Span text="végiggondolni, " class="bold"></Span>
+            <Span text="hogyan kezdjünk hozzá a feladat megoldásához, mit kell majd csinálnunk. Ehhez készíthetünk tervet vagy rajzolhatunk ábrát is. Egy jó ábra ugyanis különösen sokat segíthet a probléma megoldásában."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="4. Hozzá kell látnunk a feladat "></Span>
+            <Span text="megoldásához." class="bold"></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="5. "></Span>
+            <Span text="Ellenőriznünk " class="bold"></Span>
+            <Span text="kell a szöveg alapján, hogy jól dolgoztunk-e."></Span>
+          </FormattedString>
+        </Label>
+        <Label class="text" textWrap="true">
+          <FormattedString>
+            <Span text="6. "></Span>
+            <Span text="Szöveges választ " class="bold"></Span>
+            <Span text="kell adnunk a feltett kérdésre."></Span>
+          </FormattedString>
+        </Label>
+        <StackLayout class="megoldas">
+          <Label textWrap="true" text="" class="bold center"></Label>
+          <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep37.png"></Image>
+          <Label textWrap="true" text="K = 4a" class="bold center keplet "></Label>
+        </StackLayout>
+        <Label class="green" textWrap="true" text="Egy festő a 3 m hosszú létráját a falhoz támasztotta, ami így 2,4 m magasságig ért fel. Milyen távol van a faltól a létra alja? "></Label>
+        <Image class="mtb-20" width="200" src="~/assets/images/temakorok/kerulet/kerulet-kep38.png"></Image>
+        <Label textWrap="true" text="Az egyenletmegoldás utolsó lépésénél használhatod a zsebszámológép négyzetgyökös függvényét. A létra alja a faltól 1,8 m távol van."></Label>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+
+</TabView>
